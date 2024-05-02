@@ -9,7 +9,7 @@ import {
   Button,
 } from '@nextui-org/react';
 import { useLocale } from 'next-intl';
-import { useRouter, usePathname } from '@/core/navigation';
+import { useRouter, usePathname } from '@/core/navigation/navigation';
 import { AiOutlineGlobal } from 'react-icons/ai';
 import { GetMethodStoreGlobal } from '@/globals/stores/session/session';
 import { HelperTime } from '@/globals/helpers/helpers';

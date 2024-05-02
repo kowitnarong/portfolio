@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 
 import {
   Navbar,
@@ -10,115 +9,57 @@ import {
   NavbarMenuItem,
   NavbarContent,
   NavbarItem,
-  Button,
   Link,
 } from '@nextui-org/react';
 import { ThemeSwitcher } from '../theme/theme-swithcer';
 import LanguageSwitcher from '../language/language-swithcer';
-import { usePathname, useRouter } from '@/core/navigation';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { usePathname, useRouter } from '@/core/navigation/navigation';
+import { useEffect, useMemo, useState } from 'react';
 import { UseStoreGlobal } from '@/globals/stores/session/session';
 import { useNavigateLoader } from '../../hooks/navigate-loader';
-import { HelperSecurity, HelperTime } from '@/globals/helpers/helpers';
 import { useTheme } from 'next-themes';
-import {
-  GetMethodStoreGlobalPersist,
-  UseStoreGlobalPersist,
-} from '@/globals/stores/persist/persist';
-import APIGlobal from '@/globals/api/api';
-import { middlewareFirebaseInit } from '@/core/middlewares/firebase';
-
-interface IProfile {
-  firstName: string;
-  lastName: string;
-  email: string;
-}
 
 export default function NavbarContainer() {
   const { menuUIIsShow } = UseStoreGlobal(['menuUIIsShow']);
-  const { userData } = UseStoreGlobalPersist(['userData']);
-  const { setUserData } = GetMethodStoreGlobalPersist();
 
   const t = useTranslations();
   const pathname = usePathname();
   const router = useRouter();
-  const navigateWithLoader = useNavigateLoader();
   const { theme } = useTheme();
 
   const menuItems = useMemo(
     () => [
       { href: `/`, text: t('Navbar.header.home') },
+      { href: `/work`, text: t('Navbar.header.work') },
       { href: `/about`, text: t('Navbar.header.about') },
     ],
     [t],
   );
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isHasUserProfile, setIsHasUserProfile] = useState(false);
-
-  const profile = useRef({
-    firstName: '',
-    lastName: '',
-    email: '',
-  } as IProfile);
-
-  const setIsLogout = () => {
-    setIsHasUserProfile(false);
-  };
-
   const [mounted, setMounted] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const setUserProfile = async () => {
-      if (!userData) {
-        setIsHasUserProfile(false);
-        setMounted(true);
-        return;
-      }
-
-      await middlewareFirebaseInit();
-
-      const resProfile = await APIGlobal.ReadUserProfile({
-        userId: HelperSecurity.Decrypted(userData.uid),
-      });
-
-      if (resProfile.error) {
-        setUserData(null);
-        setIsHasUserProfile(false);
-        return;
-      }
-
-      profile.current = {
-        firstName: resProfile.res?.data.profile.firstName,
-        lastName: resProfile.res?.data.profile.lastName,
-        email: resProfile.res?.data.contact.email,
-      };
-
-      setIsHasUserProfile(true);
-      setMounted(true);
-    };
-
-    setUserProfile();
-  }, [userData, setUserData, setMounted]);
+  useEffect(() => setMounted(true), []);
 
   if (!mounted || !menuUIIsShow.isShowHeader) return null;
 
   return (
     <Navbar
+      isBordered
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       disableAnimation={false}
-      isBordered
       className="bg-white dark:bg-slate-950"
     >
       <NavbarContent className="sm:hidden" justify="start">
-        <li>
-          <NavbarMenuToggle className="text-black dark:text-white" />
+        <li className="flex h-full w-full justify-start items-center">
+          <NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} />
         </li>
-        <li className="flex flex-row inset-y-0 left-[16.5%] absolute items-center dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
-          <p className="font-bold text-black ml-2 dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
-            Portfolio
-          </p>
+      </NavbarContent>
+
+      <NavbarContent className="w-full sm:hidden" justify="center">
+        <li className="flex font-bold h-full text-black ml-2 w-full justify-start items-center dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
+          Portfolio
         </li>
       </NavbarContent>
 
@@ -128,7 +69,7 @@ export default function NavbarContainer() {
             Portfolio
           </p>
         </li>
-        <NavbarItem isActive={pathname === '/' ? true : false}>
+        <NavbarItem>
           <Link
             className="cursor-pointer"
             color={
@@ -141,13 +82,34 @@ export default function NavbarContainer() {
             style={{ fontSize: 'min(max(0.75rem, 0.8vw), 1rem)' }}
             aria-current="page"
             onPress={() => {
+              if (pathname === '/') return;
               router.push('/');
             }}
           >
             {t('Navbar.header.home')}
           </Link>
         </NavbarItem>
-        <NavbarItem isActive={pathname === '/about' ? true : false}>
+        <NavbarItem>
+          <Link
+            className="cursor-pointer"
+            color={
+              pathname === '/work'
+                ? theme === 'light'
+                  ? 'primary'
+                  : 'warning'
+                : 'foreground'
+            }
+            style={{ fontSize: 'min(max(0.75rem, 0.8vw), 1rem)' }}
+            aria-current="page"
+            onPress={() => {
+              if (pathname === '/work') return;
+              router.push('/work');
+            }}
+          >
+            {t('Navbar.header.work')}
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
           <Link
             className="cursor-pointer"
             color={
@@ -160,6 +122,7 @@ export default function NavbarContainer() {
             style={{ fontSize: 'min(max(0.75rem, 0.8vw), 1rem)' }}
             aria-current="page"
             onPress={() => {
+              if (pathname === '/about') return;
               router.push('/about');
             }}
           >
@@ -196,6 +159,10 @@ export default function NavbarContainer() {
                   : 'foreground'
               }
               onPress={() => {
+                if (item.href === pathname) {
+                  setIsMenuOpen(false);
+                  return;
+                }
                 router.push(item.href);
                 setIsMenuOpen(false);
               }}

@@ -1,6 +1,6 @@
 import createMiddleware from 'next-intl/middleware';
 import { NextRequest, NextResponse } from 'next/server';
-import { locales, localePrefix } from './core/navigation';
+import { locales, localePrefix } from './core/navigation/navigation';
 
 const nextIntlMiddleware = createMiddleware({
   defaultLocale: 'en',

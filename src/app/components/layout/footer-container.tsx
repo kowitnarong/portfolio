@@ -10,19 +10,15 @@ export default function FooterContainer() {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
-  if (!mounted) return null;
-
-  if (!menuUIIsShow.isShowFooter) {
-    return <></>;
-  }
+  if (!mounted || !menuUIIsShow.isShowFooter) return null;
 
   return (
-    <main className="bg-gray-50 dark:bg-gray-900 dark:text-gray-100 text-gray-900">
+    <main className="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
       <footer
         style={{
           fontSize: '0.75rem',
         }}
-        className="text-center flex flex-col justify-center items-center p-4 border-t-1 border-gray-300 dark:border-gray-700"
+        className="flex flex-col border-t-1 border-gray-300 text-center p-4 justify-center items-center dark:border-gray-700"
       >
         © 2024 Golffy183
         <Link

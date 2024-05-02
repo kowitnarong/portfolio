@@ -8,7 +8,7 @@ import {
   setDoc,
 } from 'firebase/firestore';
 
-import { middlewareFirebase } from '@/core/middlewares/firebase';
+import { middlewareFirebase } from '@/core/middlewares/firebase/firebase';
 import { GetFirestore } from '@/core/middlewares/firebase/firestore';
 import { HelperPromise, HelperType } from '@/globals/helpers/helpers';
 

@@ -7,9 +7,9 @@ import { HelperInit } from '@/globals/helpers/helpers';
 import { useEffect } from 'react';
 import Profile from '@/app/assets/profile.webp';
 import Link from 'next/link';
-import { SocialMedia } from '../components/layout/social-media';
+import { SocialMedia } from '../../components/layout/social-media';
 
-export default function Home() {
+export default function WorkPage() {
   const t = useTranslations();
 
   useEffect(() => {

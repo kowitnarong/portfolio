@@ -1,5 +1,5 @@
 {
-  "Home": {
+  "Work": {
     "language": "ภาษาไทย",
     "content": {
       "docs": {
@@ -26,7 +26,8 @@
   },
   "Navbar": {
     "header": {
-      "home": "หน้าหลัก",
+      "home": "หน้าแรก",
+      "work": "งาน",
       "login": "เข้าสู่ระบบ",
       "about": "เกี่ยวกับ"
     },

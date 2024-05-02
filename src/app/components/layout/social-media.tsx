@@ -1,26 +1,39 @@
-import { Image } from '@nextui-org/react';
+import { Button, Link } from '@nextui-org/react';
+import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa6';
 
 export const SocialMedia = () => {
   return (
-    <div className="flex flex-row justify-center items-center gap-2">
-      <Image
-        src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/facebook.svg"
-        alt="Facebook"
-        width={36}
-        height={36}
-      />
-      <Image
-        src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg"
-        alt="Github"
-        width={36}
-        height={36}
-      />
-      <Image
-        src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg"
-        alt="Linkedin"
-        width={36}
-        height={36}
-      />
+    <div className="flex flex-row gap-3 justify-center items-center">
+      <Button
+        size="md"
+        as={Link}
+        isIconOnly
+        aria-label="Facebook"
+        isExternal
+        href="https://www.facebook.com/golf183/"
+      >
+        <FaFacebook size={24} />
+      </Button>
+      <Button
+        size="md"
+        as={Link}
+        isIconOnly
+        aria-label="Github"
+        isExternal
+        href="https://github.com/Golffy183/"
+      >
+        <FaGithub size={24} />
+      </Button>
+      <Button
+        size="md"
+        as={Link}
+        isIconOnly
+        aria-label="Linkedin"
+        isExternal
+        href="https://www.linkedin.com/in/kowit-narongtuwapan-4a6b2825a/"
+      >
+        <FaLinkedin size={24} />
+      </Button>
     </div>
   );
 };

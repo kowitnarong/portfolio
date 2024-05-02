@@ -1,5 +1,5 @@
 import { GetMethodStoreGlobal } from '@/globals/stores/session/session';
-import { useRouter } from '@/core/navigation';
+import { useRouter } from '@/core/navigation/navigation';
 import { HelperTime } from '@/globals/helpers/helpers';
 
 interface INavigateWithLoader {

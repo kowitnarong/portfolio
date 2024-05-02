@@ -1,5 +1,5 @@
 {
-  "Home": {
+  "Work": {
     "language": "English",
     "content": {
       "docs": {
@@ -27,6 +27,7 @@
   "Navbar": {
     "header": {
       "home": "Home",
+      "work": "Work",
       "login": "Login",
       "about": "About"
     },
