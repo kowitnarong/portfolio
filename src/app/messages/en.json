@@ -1,0 +1,54 @@
+{
+  "Home": {
+    "language": "English",
+    "content": {
+      "docs": {
+        "title": "Docs",
+        "description": "Find in-depth information about Next.js features and API."
+      },
+      "learn": {
+        "title": "Learn",
+        "description": "Learn about Next.js in an interactive course with quizzes!"
+      },
+      "template": {
+        "title": "Template",
+        "description": "Explore starter templates for Next.js."
+      },
+      "deploy": {
+        "title": "Deploy",
+        "description": "Instantly deploy your Next.js site to a public URL with Vercel."
+      }
+    }
+  },
+  "Login": {
+    "title": "Login",
+    "description": "Please login with your account"
+  },
+  "Navbar": {
+    "header": {
+      "home": "Home",
+      "login": "Login",
+      "about": "About"
+    },
+    "profile": {
+      "title": "Welcome, {name}!",
+      "logout": "Logout"
+    }
+  },
+  "Form": {
+    "validate": {
+      "required": "Please filling space",
+      "min": "Please fill more than {count} character",
+      "tooManyRequest": "Too many request, please try again later",
+      "userOrPasswordWrong": "Wrong user or password",
+      "email": "Invalid email type",
+      "networkRequestFailed": "Can't connect network"
+    },
+    "placeholder": {
+      "email": "Enter your email",
+      "password": "Enter your password"
+    },
+    "submit": "Sign in",
+    "back": "Back"
+  }
+}
