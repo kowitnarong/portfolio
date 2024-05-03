@@ -13,7 +13,7 @@ import localFont from 'next/font/local';
 export const metadata: Metadata = {
   title: {
     default: 'Portfolio | Kowit Narongtuwapan',
-    template: '%s | Portfolio | Kowit Narongtuwapan',
+    template: '%s | Kowit Narongtuwapan',
   },
   description: 'PWA application with Next',
   generator: 'Next.js',

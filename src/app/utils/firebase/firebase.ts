@@ -1,5 +1,3 @@
-'use client';
-
 import { middlewareFirebase } from '@/core/middlewares/firebase/firebase';
 import APIGlobal from '@/globals/api/api';
 import { HelperSecurity, HelperTime } from '@/globals/helpers/helpers';

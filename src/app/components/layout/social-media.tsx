@@ -20,7 +20,7 @@ export const SocialMedia = () => {
         isIconOnly
         aria-label="Github"
         isExternal
-        href="https://github.com/Golffy183/"
+        href="https://github.com/kowitnarong/"
       >
         <FaGithub size={24} />
       </Button>

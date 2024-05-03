@@ -4,7 +4,6 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import TypewriterComponent from 'typewriter-effect';
 import { HelperInit } from '@/globals/helpers/helpers';
-import { useEffect } from 'react';
 import Profile from '@/app/assets/profile.webp';
 import Link from 'next/link';
 import { SocialMedia } from '@/app/components/layout/social-media';
@@ -13,12 +12,10 @@ import styles from './about.module.css';
 export default function AboutPage() {
   const t = useTranslations();
 
-  useEffect(() => {
-    HelperInit.InitPage({
-      menuUIIsShow: { isShowHeader: true, isShowFooter: true },
-      loadTimeout: 1500,
-    });
-  }, []);
+  HelperInit.InitPage({
+    menuUIIsShow: { isShowHeader: true, isShowFooter: true },
+    loadTimeout: 1500,
+  });
 
   return (
     <main
