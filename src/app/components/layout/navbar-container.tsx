@@ -16,8 +16,8 @@ import LanguageSwitcher from '../language/language-swithcer';
 import { usePathname, useRouter } from '@/core/navigation/navigation';
 import { useEffect, useMemo, useState } from 'react';
 import { UseStoreGlobal } from '@/globals/stores/session/session';
-import { useNavigateLoader } from '../../hooks/navigate-loader';
 import { useTheme } from 'next-themes';
+import { Header } from './header';
 
 export default function NavbarContainer() {
   const { menuUIIsShow } = UseStoreGlobal(['menuUIIsShow']);
@@ -70,64 +70,31 @@ export default function NavbarContainer() {
           </p>
         </li>
         <NavbarItem>
-          <Link
-            className="cursor-pointer"
-            color={
-              pathname === '/'
-                ? theme === 'light'
-                  ? 'primary'
-                  : 'warning'
-                : 'foreground'
-            }
-            style={{ fontSize: 'min(max(0.75rem, 0.8vw), 1rem)' }}
-            aria-current="page"
-            onPress={() => {
-              if (pathname === '/') return;
-              router.push('/');
-            }}
-          >
-            {t('Navbar.header.home')}
-          </Link>
+          <Header
+            headerText={t('Navbar.header.home')}
+            navigationPathname="/"
+            pathname={pathname}
+            theme={theme}
+            router={router}
+          />
         </NavbarItem>
         <NavbarItem>
-          <Link
-            className="cursor-pointer"
-            color={
-              pathname === '/work'
-                ? theme === 'light'
-                  ? 'primary'
-                  : 'warning'
-                : 'foreground'
-            }
-            style={{ fontSize: 'min(max(0.75rem, 0.8vw), 1rem)' }}
-            aria-current="page"
-            onPress={() => {
-              if (pathname === '/work') return;
-              router.push('/work');
-            }}
-          >
-            {t('Navbar.header.work')}
-          </Link>
+          <Header
+            headerText={t('Navbar.header.work')}
+            navigationPathname="/work"
+            pathname={pathname}
+            theme={theme}
+            router={router}
+          />
         </NavbarItem>
         <NavbarItem>
-          <Link
-            className="cursor-pointer"
-            color={
-              pathname === '/about'
-                ? theme === 'light'
-                  ? 'primary'
-                  : 'warning'
-                : 'foreground'
-            }
-            style={{ fontSize: 'min(max(0.75rem, 0.8vw), 1rem)' }}
-            aria-current="page"
-            onPress={() => {
-              if (pathname === '/about') return;
-              router.push('/about');
-            }}
-          >
-            {t('Navbar.header.about')}
-          </Link>
+          <Header
+            headerText={t('Navbar.header.about')}
+            navigationPathname="/about"
+            pathname={pathname}
+            theme={theme}
+            router={router}
+          />
         </NavbarItem>
       </NavbarContent>
 

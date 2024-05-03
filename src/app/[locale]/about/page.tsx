@@ -8,14 +8,17 @@ import Profile from '@/app/assets/profile.webp';
 import Link from 'next/link';
 import { SocialMedia } from '@/app/components/layout/social-media';
 import styles from './about.module.css';
+import { useEffect } from 'react';
 
 export default function AboutPage() {
   const t = useTranslations();
 
-  HelperInit.InitPage({
-    menuUIIsShow: { isShowHeader: true, isShowFooter: true },
-    loadTimeout: 1500,
-  });
+  useEffect(() => {
+    HelperInit.InitPage({
+      menuUIIsShow: { isShowHeader: true, isShowFooter: true },
+      loadTimeout: 1500,
+    });
+  }, []);
 
   return (
     <main
