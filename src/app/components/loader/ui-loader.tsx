@@ -1,8 +1,9 @@
 'use client';
 
 import { UseStoreGlobal } from '@/globals/stores/session/session';
-import styles from './ui-loader.module.css';
+import styles from './styles/ui-loader.module.css';
 import { Puff } from 'react-loader-spinner';
+import { ScrollToTop } from '../layout/scroll-to-top';
 
 export default function UILoader({ children }: { children: React.ReactNode }) {
   const { isLoading } = UseStoreGlobal(['isLoading']);
@@ -10,6 +11,7 @@ export default function UILoader({ children }: { children: React.ReactNode }) {
   return isLoading ? (
     <>
       {children}
+
       <div
         className={
           isLoading &&
@@ -28,6 +30,9 @@ export default function UILoader({ children }: { children: React.ReactNode }) {
       </div>
     </>
   ) : (
-    <>{children}</>
+    <>
+      {children}
+      <ScrollToTop />
+    </>
   );
 }
