@@ -8,7 +8,7 @@ import Profile from '@/app/assets/profile.webp';
 import Link from 'next/link';
 import { SocialMedia } from '@/app/components/layout/social-media';
 import styles from './about.module.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function AboutPage() {
   const t = useTranslations();
@@ -20,11 +20,17 @@ export default function AboutPage() {
     });
   }, []);
 
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => setIsMounted(true), []);
+
+  if (!isMounted) return null;
+
   return (
     <main
       className={
         styles.fadeIn +
-        ' flex flex-col min-h-screen bg-gray-50 py-4 px-10 text-gray-900 items-center justify-start lg:py-10 lg:px-24 dark:bg-gray-800 dark:text-gray-100'
+        ' flex flex-col min-h-[90vh] bg-gray-50 py-4 px-10 text-gray-900 items-center justify-start lg:py-10 lg:px-24 dark:bg-gray-800 dark:text-gray-100'
       }
     >
       <div className="font-bold mt-4 text-black mb-8 text-4xl dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">

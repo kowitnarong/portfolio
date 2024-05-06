@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { HelperInit } from '@/globals/helpers/helpers';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
 import { ImageOverlay } from '../components/image/image-overlay';
 import Profile from '../assets/profile.webp';
@@ -17,8 +17,14 @@ export default function Home() {
     });
   }, []);
 
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => setIsMounted(true), []);
+
+  if (!isMounted) return null;
+
   return (
-    <main className="flex flex-col min-h-screen bg-gray-50 py-4 px-10 items-center justify-start lg:pb-10 lg:pt-6 lg:px-24 dark:bg-gray-800 dark:text-gray-100">
+    <main className="flex flex-col min-h-[90vh] bg-gray-50 py-4 px-10 items-center justify-start lg:pb-10 lg:pt-6 lg:px-24 dark:bg-gray-800 dark:text-gray-100">
       <div className="flex flex-col font-bold mt-10 w-full items-start">
         <span className="text-2xl text-gray-400 dark:drop-shadow-[0_0_0.3rem_#00000070]">
           Web & Game Developer
@@ -49,9 +55,9 @@ export default function Home() {
         />
       </div>
       <div className="mt-10 mb-5 w-full items-center justify-center">
-        <p className="flex w-full text-xl items-center justify-center">
+        <span className="flex w-full text-xl items-center justify-center">
           Web Development Projects
-        </p>
+        </span>
         <div className="flex flex-wrap gap-4 justify-center items-center mt-4">
           <ImageOverlay
             className="w-80 h-80"
@@ -70,9 +76,9 @@ export default function Home() {
         </div>
       </div>
       <div className="mt-10 mb-5 w-full items-center justify-center">
-        <p className="flex w-full text-xl items-center justify-center">
+        <span className="flex w-full text-xl items-center justify-center">
           Game Development Projects
-        </p>
+        </span>
         <div className="flex flex-wrap gap-4 justify-center items-center mt-4">
           <ImageOverlay
             className="w-80 h-80"
