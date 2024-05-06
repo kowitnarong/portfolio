@@ -3,7 +3,7 @@ import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa6';
 
 export const SocialMedia = () => {
   return (
-    <div className="flex flex-row gap-3 justify-center items-center">
+    <div className="flex flex-row items-center justify-center gap-3">
       <Button
         size="md"
         as={Link}

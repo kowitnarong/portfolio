@@ -30,25 +30,25 @@ export default function AboutPage() {
     <main
       className={
         styles.fadeIn +
-        ' flex flex-col min-h-[90vh] bg-gray-50 py-4 px-10 text-gray-900 items-center justify-start lg:py-10 lg:px-24 dark:bg-gray-800 dark:text-gray-100'
+        ' flex min-h-[90vh] flex-col items-center justify-start bg-gray-50 px-10 py-4 text-gray-900 dark:bg-gray-800 dark:text-gray-100 lg:px-24 lg:py-10'
       }
     >
-      <div className="font-bold mt-4 text-black mb-8 text-4xl dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
+      <div className="mb-8 mt-4 text-4xl font-bold text-black dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
         About Me
       </div>
-      <div className="flex-col flex w-full items-center justify-center lg:flex-row">
-        <div className="flex w-full max-w-[360px] px-4 justify-center lg:max-w-[480px] lg:w-[40%] lg:justify-end">
+      <div className="flex w-full flex-col items-center justify-center lg:flex-row">
+        <div className="flex w-full max-w-[360px] justify-center px-4 lg:w-[40%] lg:max-w-[480px] lg:justify-end">
           <Image
             priority
             src={Profile.src}
             alt="profile"
             width={360}
             height={360}
-            className="border-black rounded-full shadow-md w-full dark:border-white dark:drop-shadow-[0_0_0.3rem_#00000070]"
+            className="w-full rounded-full border-black shadow-md dark:border-white dark:drop-shadow-[0_0_0.3rem_#00000070]"
           />
         </div>
-        <div className="flex flex-col mb-10 w-full place-items-center lg:w-[60%] dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
-          <div className="flex h-auto my-6 justify-center">
+        <div className="mb-10 flex w-full flex-col place-items-center dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070] lg:w-[60%]">
+          <div className="my-6 flex h-auto justify-center">
             <TypewriterComponent
               options={{
                 strings: [
@@ -63,7 +63,7 @@ export default function AboutPage() {
               }}
             />
           </div>
-          <ul className="list-disc list-inside">
+          <ul className="list-inside list-disc">
             <li>I'm based in Chiang Mai, Thailand.</li>
             <li>
               You can contact me at{' '}
@@ -76,8 +76,8 @@ export default function AboutPage() {
             </li>
           </ul>
           <div>
-            <h1 className="font-bold mt-6 mb-2 text-2xl">Web Developer Skills</h1>
-            <ul className="list-disc list-inside">
+            <h1 className="mb-2 mt-6 text-2xl font-bold">Web Developer Skills</h1>
+            <ul className="list-inside list-disc">
               <li>
                 <span className="font-bold">Languages:</span> JavaScript, TypeScript,
                 HTML,
@@ -98,8 +98,8 @@ export default function AboutPage() {
                 Canva, AdobeXD
               </li>
             </ul>
-            <h1 className="font-bold mt-6 mb-2 text-2xl">Game Developer Skills</h1>
-            <ul className="list-disc list-inside">
+            <h1 className="mb-2 mt-6 text-2xl font-bold">Game Developer Skills</h1>
+            <ul className="list-inside list-disc">
               <li>
                 <span className="font-bold">Tools:</span> Unity, Monogame, Unreal Engine
                 (Visual Scripting), Phaser 2D (JavaScript)
@@ -111,8 +111,8 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-      <div className="h-auto mb-6 w-full justify-center items-center">
-        <p className="font-bold text-center text-black mb-4 text-2xl dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
+      <div className="mb-6 h-auto w-full items-center justify-center">
+        <p className="mb-4 text-center text-2xl font-bold text-black dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
           Social Media
         </p>
         <SocialMedia />

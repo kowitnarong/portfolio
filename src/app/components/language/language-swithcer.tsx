@@ -47,10 +47,10 @@ export default function LanguageSwitcher() {
             setIsLoading(false);
           }}
         >
-          <DropdownItem className="dark:text-slate-400 text-black" key="en">
+          <DropdownItem className="text-black dark:text-slate-400" key="en">
             English
           </DropdownItem>
-          <DropdownItem className="dark:text-slate-400 text-black" key="th">
+          <DropdownItem className="text-black dark:text-slate-400" key="th">
             ไทย
           </DropdownItem>
         </DropdownMenu>

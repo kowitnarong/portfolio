@@ -49,20 +49,20 @@ export default function NavbarContainer() {
       className="bg-white dark:bg-slate-950"
     >
       <NavbarContent className="sm:hidden" justify="start">
-        <li className="flex h-full w-full justify-start items-center">
+        <li className="flex h-full w-full items-center justify-start">
           <NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} />
         </li>
       </NavbarContent>
 
       <NavbarContent className="w-full sm:hidden" justify="center">
-        <li className="flex font-bold h-full text-black ml-2 w-full justify-start items-center dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
+        <li className="ml-2 flex h-full w-full items-center justify-start font-bold text-black dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
           Portfolio
         </li>
       </NavbarContent>
 
-      <NavbarContent className="gap-8 hidden items-center sm:flex" justify="center">
-        <li className="border-black flex border-r-2 pr-8 items-center justify-start dark:border-white">
-          <p className="font-bold text-black ml-2 dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
+      <NavbarContent className="hidden items-center gap-8 sm:flex" justify="center">
+        <li className="flex items-center justify-start border-r-2 border-black pr-8 dark:border-white">
+          <p className="ml-2 font-bold text-black dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
             Portfolio
           </p>
         </li>
@@ -81,7 +81,7 @@ export default function NavbarContainer() {
               <Button
                 style={{ fontSize: 'min(max(0.75rem, 1.1vw), 1rem)' }}
                 disableRipple
-                className="p-0 -mr-2 gap-1 flex items-center bg-transparent data-[hover=true]:bg-transparent"
+                className="-mr-2 flex items-center gap-1 bg-transparent p-0 data-[hover=true]:bg-transparent"
                 radius="sm"
                 variant="light"
               >
@@ -112,7 +112,7 @@ export default function NavbarContainer() {
                   router.push('/work/web-development');
                 }}
               >
-                <div className="w-full flex justify-between items-center">
+                <div className="flex w-full items-center justify-between">
                   <span>Web Development</span>
                   <span className="pb-0.5">→</span>
                 </div>
@@ -125,7 +125,7 @@ export default function NavbarContainer() {
                   router.push('/work/game-development');
                 }}
               >
-                <div className="w-full flex justify-between items-center">
+                <div className="flex w-full items-center justify-between">
                   <span>Game Development</span>
                   <span className="pb-0.5">→</span>
                 </div>
@@ -145,11 +145,11 @@ export default function NavbarContainer() {
       </NavbarContent>
 
       <NavbarContent justify="end">
-        <li className="hidden sm:flex sm:space-x-2 sm:items-center sm:justify-center">
+        <li className="hidden sm:flex sm:items-center sm:justify-center sm:space-x-2">
           <ThemeSwitcher />
           <LanguageSwitcher />
         </li>
-        <li className="flex space-x-1 items-center justify-end sm:hidden">
+        <li className="flex items-center justify-end space-x-1 sm:hidden">
           <ThemeSwitcher />
           <LanguageSwitcher />
         </li>

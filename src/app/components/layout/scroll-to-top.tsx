@@ -34,11 +34,11 @@ export const ScrollToTop = () => {
       aria-label="Scroll To Top"
       className={
         `${styles.button} ${styles.scrollToTopButton} ${isVisible ? styles.visible : ''}` +
-        ' bg-[#006FEE] dark:bg-[#EAB308] shadow-md'
+        ' bg-[#006FEE] shadow-md dark:bg-[#EAB308]'
       }
       onClick={scrollToTop}
     >
-      <IoIosArrowRoundUp className="text-white inline-block h-6 w-6" />
+      <IoIosArrowRoundUp className="inline-block h-6 w-6 text-white" />
     </button>
   );
 };

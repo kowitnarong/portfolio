@@ -21,6 +21,6 @@ export default function WebDevelopmentPage() {
   if (!isMounted) return null;
 
   return (
-    <main className="flex flex-col min-h-[90vh] bg-gray-50 py-4 px-10 text-gray-900 items-center justify-start lg:py-10 lg:px-24 dark:bg-gray-800 dark:text-gray-100"></main>
+    <main className="flex min-h-[90vh] flex-col items-center justify-start bg-gray-50 px-10 py-4 text-gray-900 dark:bg-gray-800 dark:text-gray-100 lg:px-24 lg:py-10"></main>
   );
 }

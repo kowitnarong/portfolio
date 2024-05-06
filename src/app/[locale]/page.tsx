@@ -24,19 +24,19 @@ export default function Home() {
   if (!isMounted) return null;
 
   return (
-    <main className="flex flex-col min-h-[90vh] bg-gray-50 py-4 px-10 items-center justify-start lg:pb-10 lg:pt-6 lg:px-24 dark:bg-gray-800 dark:text-gray-100">
-      <div className="flex flex-col font-bold mt-10 w-full items-start">
+    <main className="flex min-h-[90vh] flex-col items-center justify-start bg-gray-50 px-10 py-4 dark:bg-gray-800 dark:text-gray-100 lg:px-24 lg:pb-10 lg:pt-6">
+      <div className="mt-10 flex w-full flex-col items-start font-bold">
         <span className="text-2xl text-gray-400 dark:drop-shadow-[0_0_0.3rem_#00000070]">
           Web & Game Developer
         </span>
-        <span className="text-black text-4xl dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
+        <span className="text-4xl text-black dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
           Kowit Narongtuwapan
         </span>
         <div className="mt-4 text-gray-500 dark:text-gray-400">
           Get to learn about game development specifically. I can use Unity and Unreal
           Engine to create games well. Also, I can work on web development.
           <br />
-          <ul className="list-disc list-inside mt-2">
+          <ul className="mt-2 list-inside list-disc">
             <li> Developed 3 Unity and 1 Unreal game project at university.</li>
             <li>I Can use fundamental Maya and Figma. </li>
             <li>
@@ -46,7 +46,7 @@ export default function Home() {
           </ul>
         </div>
       </div>
-      <div className="mt-10 max-w-[760px] w-[85%] aspect-video">
+      <div className="mt-10 aspect-video w-[85%] max-w-[760px]">
         <ReactPlayer
           controls={true}
           width="100%"
@@ -54,20 +54,20 @@ export default function Home() {
           url="https://youtu.be/b2Z8GNqkVa0"
         />
       </div>
-      <div className="mt-10 mb-5 w-full items-center justify-center">
-        <span className="flex w-full text-xl items-center justify-center">
+      <div className="mb-5 mt-10 w-full items-center justify-center">
+        <span className="flex w-full items-center justify-center text-xl">
           Web Development Projects
         </span>
-        <div className="flex flex-wrap gap-4 justify-center items-center mt-4">
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
           <ImageOverlay
-            className="w-80 h-80"
+            className="h-80 w-80"
             src={Profile.src}
             alt="profile"
             textTitle="Unity"
             textDescription="Developed 3 Unity game projects at university."
           />
           <ImageOverlay
-            className="w-80 h-80"
+            className="h-80 w-80"
             src={Profile.src}
             alt="profile"
             textTitle="Unreal"
@@ -75,27 +75,27 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="mt-10 mb-5 w-full items-center justify-center">
-        <span className="flex w-full text-xl items-center justify-center">
+      <div className="mb-5 mt-10 w-full items-center justify-center">
+        <span className="flex w-full items-center justify-center text-xl">
           Game Development Projects
         </span>
-        <div className="flex flex-wrap gap-4 justify-center items-center mt-4">
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
           <ImageOverlay
-            className="w-80 h-80"
+            className="h-80 w-80"
             src={Profile.src}
             alt="profile"
             textTitle="Castle Knight (2021)"
             textDescription="Castle Knight เป็นเกมที่เกี่ยวกับการผจญภัย ซึ่งตัวเกมเพลย์หลัก ๆ คือการต่อสู้กับศัตรูภายในฉาก โดยผู้เล่นจะมีความสามารถเพียงแค่โจมตีกับป้องกันเท่านั้น สำหรับการรับมือศัตรูที่มีความสามารถแตกต่างกันออกไป"
           />
           <ImageOverlay
-            className="w-80 h-80"
+            className="h-80 w-80"
             src={Profile.src}
             alt="profile"
             textTitle="Unreal"
             textDescription="Developed 1 Unreal game project at university."
           />
           <ImageOverlay
-            className="w-80 h-80"
+            className="h-80 w-80"
             src={Profile.src}
             alt="profile"
             textTitle="Figma"

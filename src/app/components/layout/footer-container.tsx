@@ -18,7 +18,7 @@ export default function FooterContainer() {
         style={{
           fontSize: '0.75rem',
         }}
-        className="flex flex-col border-t-1 border-gray-300 text-center p-4 justify-center items-center dark:border-gray-700"
+        className="flex flex-col items-center justify-center border-t-1 border-gray-300 p-4 text-center dark:border-gray-700"
       >
         © 2024 Golffy183
         <Link
