@@ -24,6 +24,7 @@ import { useTheme } from 'next-themes';
 import { Header } from './header';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import { HeaderMobile } from './header-mobile';
+import { Accordion } from './accordion';
 
 export default function NavbarContainer() {
   const { menuUIIsShow } = UseStoreGlobal(['menuUIIsShow']);
@@ -167,13 +168,37 @@ export default function NavbarContainer() {
           />
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <HeaderMobile
+          <Accordion
             href="/work"
-            text={t('Navbar.header.work')}
             pathname={pathname}
-            theme={theme}
             router={router}
-            setIsMenuOpen={(isMenuOpen) => setIsMenuOpen(isMenuOpen)}
+            theme={theme}
+            className="-mr-2 flex items-center gap-1 bg-transparent p-0 text-base data-[hover=true]:bg-transparent"
+            title={t('Navbar.header.work')}
+            content={
+              <ul className="ml-4 flex w-full flex-col items-start justify-center gap-y-1">
+                <li>
+                  <HeaderMobile
+                    href="/work/web-development"
+                    text="Web Development"
+                    pathname={pathname}
+                    theme={theme}
+                    router={router}
+                    setIsMenuOpen={(isMenuOpen) => setIsMenuOpen(isMenuOpen)}
+                  />
+                </li>
+                <li>
+                  <HeaderMobile
+                    href="/work/game-development"
+                    text="Game Development"
+                    pathname={pathname}
+                    theme={theme}
+                    router={router}
+                    setIsMenuOpen={(isMenuOpen) => setIsMenuOpen(isMenuOpen)}
+                  />
+                </li>
+              </ul>
+            }
           />
         </NavbarMenuItem>
         <NavbarMenuItem>
