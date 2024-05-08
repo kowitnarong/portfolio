@@ -15,10 +15,21 @@ export const metadata: Metadata = {
     default: 'Portfolio | Kowit Narongtuwapan',
     template: '%s | Kowit Narongtuwapan',
   },
-  description: 'PWA application with Next',
+  description: 'Portfolio of Kowit Narongtuwapan',
   generator: 'Next.js',
   manifest: '/manifest.webmanifest',
-  keywords: ['nextjs', 'nextjs14', 'next14', 'pwa', 'next-pwa'],
+  keywords: [
+    'portfolio',
+    'nextjs portfolio',
+    'portfolio kowit narongtuwapan',
+    'kowit',
+    'kowit narongtuwapan',
+    'nextjs',
+    'nextjs14',
+    'next14',
+    'pwa',
+    'next-pwa',
+  ],
   authors: [
     { name: 'Kowit Narongtuwapan' },
     {

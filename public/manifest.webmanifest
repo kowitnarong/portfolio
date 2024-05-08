@@ -1,7 +1,7 @@
 {
-  "name": "PWA with Next",
-  "description": "Progressive Web App with Next.js boilerplate",
-  "short_name": "PWA Next",
+  "name": "Portfolio | Kowit Narongtuwapan",
+  "description": "Portfolio of Kowit Narongtuwapan",
+  "short_name": "Portfolio | Kowit",
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
   "display": "standalone",
