@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://next-firebase-boilerplate-xi.vercel.app/sitemap.xml
+Sitemap: https://kowitnarong.vercel.app/sitemap.xml

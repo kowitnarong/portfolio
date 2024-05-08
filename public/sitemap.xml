@@ -6,18 +6,15 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://next-firebase-boilerplate-xi.vercel.app</loc>
-  <lastmod>2024-04-03T09:40:27+00:00</lastmod>
+  <loc>https://kowitnarong.vercel.app</loc>
 </url>
 
 <url>
-  <loc>https://next-firebase-boilerplate-xi.vercel.app/th</loc>
-  <lastmod>2024-04-03T09:40:27+00:00</lastmod>
+  <loc>https://kowitnarong.vercel.app/th</loc>
 </url>
 
 <url>
-  <loc>https://next-firebase-boilerplate-xi.vercel.app/en</loc>
-  <lastmod>2024-04-03T09:40:27+00:00</lastmod>
+  <loc>https://kowitnarong.vercel.app/en</loc>
 </url>
 
 
