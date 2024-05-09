@@ -34,7 +34,7 @@ export default function AboutPage() {
       }
     >
       <div className="mb-8 mt-4 text-4xl font-bold text-black dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
-        About Me
+        {t('About.title.name')}
       </div>
       <div className="flex w-full flex-col items-center justify-center lg:flex-row">
         <div className="flex w-full max-w-[360px] justify-center px-4 lg:w-[40%] lg:max-w-[480px] lg:justify-end">
@@ -51,10 +51,7 @@ export default function AboutPage() {
           <div className="my-6 flex h-auto justify-center">
             <TypewriterComponent
               options={{
-                strings: [
-                  'Hi, my name is Kowit Narongtuwapan 👋.',
-                  'I am a Web & Game Developer.',
-                ],
+                strings: [t('About.title.sub1'), t('About.title.sub2')],
                 autoStart: true,
                 loop: true,
                 delay: 50,
@@ -64,9 +61,9 @@ export default function AboutPage() {
             />
           </div>
           <ul className="list-inside list-disc">
-            <li>I'm based in Chiang Mai, Thailand.</li>
+            <li>{t('About.title.bullet1')}</li>
             <li>
-              You can contact me at{' '}
+              {t('About.title.bullet2')}{' '}
               <Link
                 href="mailto:kowit.narongtuwapan@hotmail.com"
                 className="font-bold underline"
@@ -76,36 +73,59 @@ export default function AboutPage() {
             </li>
           </ul>
           <div>
-            <h1 className="mb-2 mt-6 text-2xl font-bold">Web Developer Skills</h1>
+            <h1 className="mb-2 mt-6 text-2xl font-bold">
+              {t('About.title.general-skill')}
+            </h1>
             <ul className="list-inside list-disc">
+              <li>{t('About.soft skill.bullet1')}</li>
+              <li>{t('About.soft skill.bullet2')}</li>
               <li>
-                <span className="font-bold">Languages:</span> JavaScript, TypeScript,
-                HTML,
+                <span className="font-bold">
+                  {t('About.soft skill.language.thai.title')}:
+                </span>{' '}
+                {t('About.soft skill.language.thai.description')}
               </li>
               <li>
-                <span className="font-bold">Frameworks:</span> React, Next.js, Node.js,
-                Express.js, TailwindCSS
-              </li>
-              <li>
-                <span className="font-bold">Libraries:</span> Three.js (3D), Phaser (2D),
-                Vite
-              </li>
-              <li>
-                <span className="font-bold">Database:</span> MySQL, Firebase
-              </li>
-              <li>
-                <span className="font-bold">Tools:</span> Git, GitHub, Docker, Figma,
-                Canva, AdobeXD
+                <span className="font-bold">
+                  {t('About.soft skill.language.english.title')}:
+                </span>{' '}
+                {t('About.soft skill.language.english.description1') + ', '}
+                {t('About.soft skill.language.english.description2')}
               </li>
             </ul>
-            <h1 className="mb-2 mt-6 text-2xl font-bold">Game Developer Skills</h1>
+            <h1 className="mb-2 mt-6 text-2xl font-bold">{t('About.title.web-skill')}</h1>
             <ul className="list-inside list-disc">
               <li>
-                <span className="font-bold">Tools:</span> Unity, Monogame, Unreal Engine
-                (Visual Scripting), Phaser 2D (JavaScript)
+                <span className="font-bold">{t('About.skill.language')}:</span>{' '}
+                JavaScript, TypeScript, HTML,
               </li>
               <li>
-                <span className="font-bold">Multiplayer:</span> Photon
+                <span className="font-bold">{t('About.skill.framework')}:</span> React,
+                Next.js, Node.js, Express.js, TailwindCSS
+              </li>
+              <li>
+                <span className="font-bold">{t('About.skill.library')}:</span> Three.js
+                (3D), Phaser (2D), Vite
+              </li>
+              <li>
+                <span className="font-bold">{t('About.skill.database')}:</span> MySQL,
+                Firebase
+              </li>
+              <li>
+                <span className="font-bold">{t('About.skill.tool')}:</span> Git, GitHub,
+                Docker, Figma, Canva, AdobeXD
+              </li>
+            </ul>
+            <h1 className="mb-2 mt-6 text-2xl font-bold">
+              {t('About.title.game-skill')}
+            </h1>
+            <ul className="list-inside list-disc">
+              <li>
+                <span className="font-bold">{t('About.skill.tool')}:</span> Unity,
+                Monogame, Unreal Engine (Visual Scripting), Phaser 2D (JavaScript)
+              </li>
+              <li>
+                <span className="font-bold">{t('About.skill.multiplayer')}:</span> Photon
               </li>
             </ul>
           </div>

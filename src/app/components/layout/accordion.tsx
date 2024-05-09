@@ -29,9 +29,9 @@ export const Accordion = (props: AccordionProps) => {
         )}
         <div>
           {isActive ? (
-            <RiArrowDropUpLine className="mt-0.5" />
+            <RiArrowDropUpLine size={24} className="mt-0.5" />
           ) : (
-            <RiArrowDropDownLine className="mt-0.5" />
+            <RiArrowDropDownLine size={24} className="mt-0.5" />
           )}
         </div>
       </div>

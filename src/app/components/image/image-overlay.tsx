@@ -31,7 +31,10 @@ export const ImageOverlay = (props: ImageOverlayProps) => {
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`${styles.container} ${props.className}` + ' shadow-md'}
+      className={
+        `${styles.container} ${props.className} ${props.href !== undefined ? 'cursor-pointer' : ''}` +
+        ' shadow-md'
+      }
     >
       {isHovered && (
         <div className={styles.text + ' rounded-b-xl'}>

@@ -1,39 +1,233 @@
 {
-  "Work": {
-    "language": "English",
-    "content": {
-      "docs": {
-        "title": "Docs",
-        "description": "Find in-depth information about Next.js features and API."
+  "Home": {
+    "title": {
+      "role": "Web & Game Developer",
+      "name": "Kowit Narongtuwapan",
+      "description": "Get to learn about game development specifically. I can use Unity and Unreal Engine to create games well. Also, I can work on web development.",
+      "bullet1": "Developed 3 Unity and 1 Unreal game project at Chiang Mai University.",
+      "bullet2": "I Can use fundamental Maya, Adobe XD and Figma.",
+      "bullet3": "I interned in web development for 1 year (React.js, JavaScript, Typescript, Firebase)."
+    },
+    "web": {
+      "title": "Web Development Projects",
+      "muteru": {
+        "title": "Muteru (2023)",
+        "description": "Muteru is an application for travelers interested in fortune-telling and spirituality through travel routes, enhancing love and faith. No matter the route, Muteru will help boost your luck for success in your career, finances, and personal life."
       },
-      "learn": {
-        "title": "Learn",
-        "description": "Learn about Next.js in an interactive course with quizzes!"
+      "net-zero": {
+        "title": "Net-Zero (2024)",
+        "description": "Net Zero is a web application that displays carbon usage data at Chiang Mai University. The data is categorized by faculty and location within the university. The website features a dashboard and 3D map visualization."
+      }
+    },
+    "game": {
+      "title": "Game Development Projects",
+      "castle-knight": {
+        "title": "Castle Knight (2021)",
+        "description": "Castle Knight is a 2D side-scroller adventure game. The main gameplay involves fighting enemies within the level, with players only able to attack and defend. Players must use their skills to defeat enemies with varying abilities."
       },
-      "template": {
-        "title": "Template",
-        "description": "Explore starter templates for Next.js."
+      "demon-hunter": {
+        "title": "Demon Hunter (2022)",
+        "description": "Demon Hunter is a 2D top-down game where players must defeat monsters that approach them. Players can control their character in four directions and use a gun as their weapon. Items dropped by monsters can be used to enhance the player's attack power. Players must survive until the end of the time limit to win."
       },
-      "deploy": {
-        "title": "Deploy",
-        "description": "Instantly deploy your Next.js site to a public URL with Vercel."
+      "documents-master": {
+        "title": "Documents Master (2022)",
+        "description": "Documents Master is a 3D top-down game that simulates document management at Chiang Mai University. The gameplay is inspired by the game Overcooked, where players must complete randomly assigned tasks within a time limit."
+      },
+      "dawn": {
+        "title": "Dawn (2023)",
+        "description": "Dawn is a 2-player online 3D game where players must work together to guide a baby bird back to its nest. This game requires teamwork and communication to progress through the levels. The baby bird can change its element to adapt to the game's environment."
       }
     }
-  },
-  "Login": {
-    "title": "Login",
-    "description": "Please login with your account"
   },
   "Navbar": {
     "header": {
       "home": "Home",
-      "work": "Work",
-      "login": "Login",
+      "work": {
+        "title": "Work",
+        "web": "Web Development",
+        "game": "Game Development"
+      },
       "about": "About"
+    }
+  },
+  "Web": {
+    "overview": "Overview",
+    "role": "Role",
+    "framework": "Framework",
+    "library": "Library",
+    "teamSize": "Team Size",
+    "respon": "Responsible work",
+    "goto": "Go to website",
+    "button": {
+      "click": "Click here!"
     },
-    "profile": {
-      "title": "Welcome, {name}!",
-      "logout": "Logout"
+    "muteru": {
+      "subtitle": "Web Application for Tourism",
+      "frontend": {
+        "bullet1": "Developed the website's user interface based on Figma designs.",
+        "bullet2": "Used Three.js to create a 3D game on the website.",
+        "bullet3": "Used Phaser.js to create a 2D game on the website.",
+        "bullet4": "Implemented various Firebase configurations.",
+        "bullet5": "Created a system for language and font switching.",
+        "bullet6": "Developed a Backoffice dashboard for Staff and Admin."
+      },
+      "backend": {
+        "bullet1": "Created a database on Firebase.",
+        "bullet2": "Designed a relational database structure.",
+        "bullet3": "Designed data storage to support scalability and user activity tracking.",
+        "bullet4": "Created Firebase APIs for sending data to the frontend.",
+        "bullet5": "Developed an authentication system for third-party logins.",
+        "bullet6": "Managed API calls to other project applications.",
+        "bullet7": "Created a token system for rewarding users."
+      },
+      "other": {
+        "title": "Other",
+        "bullet1": "Presented and participated in meetings with other teams to discuss API development.",
+        "bullet2": "Conducted user testing to identify and resolve issues."
+      }
+    },
+    "net-zero": {
+      "subtitle": " Web Application for Carbon Footprint Visualization",
+      "frontend": {
+        "bullet1": "Developed the website's user interface based on Figma designs.",
+        "bullet2": "Created website menu windows.",
+        "bullet3": "Rearranged data from JSON files for presentation.",
+        "bullet4": "Created a system for language and font switching.",
+        "bullet5": "Developed a Backoffice dashboard for Admin."
+      },
+      "backend": {
+        "bullet1": "Created a database on Firebase.",
+        "bullet2": "Designed a relational database structure.",
+        "bullet3": "Used Firebase Cloud Functions and Realtime to retrieve data from other databases.",
+        "bullet4": "Created Firebase APIs for sending data to the frontend.",
+        "bullet5": "Developed a system for sending emails to users in case of abnormal data readings."
+      }
+    }
+  },
+  "Game": {
+    "overview": "Overview",
+    "numOfPlayers": "Number of Players",
+    "role": "Role",
+    "tools": "Tools",
+    "teamSize": "Team Size",
+    "respon": "Responsible work",
+    "play": "Play this game",
+    "button": {
+      "click": "Click here!",
+      "download": "Download!"
+    },
+    "castle-knight": {
+      "title": "Castle Knight (2021)",
+      "subtitle": "Second-year 1/64: Final Project",
+      "programmer": {
+        "bullet1": "Created the game's structure and imported assets.",
+        "bullet2": "Implemented player input handling.",
+        "bullet3": "Developed character combat and health systems.",
+        "bullet4": "Designed enemy behaviors and game logic.",
+        "bullet5": "Implemented scene transitions, sound effects, and data saving."
+      },
+      "project-manager": {
+        "bullet1": "Scheduled project tasks and deadlines.",
+        "bullet2": "Tracked progress using Microsoft Teams tasks.",
+        "bullet3": "Updated project status, organized meetings, and consolidated team contributions.",
+        "bullet4": "Managed project organization before merging into GitHub."
+      },
+      "pixel-artist": {
+        "bullet1": "Created character walking and attack animations.",
+        "bullet2": "Designed various enemy animations.",
+        "bullet3": "Developed in-game effects."
+      }
+    },
+    "demon-hunter": {
+      "title": "Demon Hunter (2022)",
+      "subtitle": "Second-year 2/64: Final Project",
+      "programmer": {
+        "bullet1": "Created the game's structure and imported assets.",
+        "bullet2": "Implemented A* Pathfinding for enemy movement towards the player.",
+        "bullet3": "Developed player controls and item usage system.",
+        "bullet4": "Designed timer, scene transitions, and sound effects.",
+        "bullet5": "Implemented player scoring system and data storage using PHP and MySQL."
+      },
+      "project-manager": {
+        "bullet1": "Facilitated team communication and collaboration.",
+        "bullet2": "Updated project status, organized meetings, and consolidated team contributions.",
+        "bullet3": "Scheduled project tasks and deadlines.",
+        "bullet4": "Tracked progress using Microsoft Teams tasks.",
+        "bullet5": "Managed project organization before merging into GitHub."
+      }
+    },
+    "documents-master": {
+      "title": "Documents Master (2022)",
+      "subtitle": "Third-year 1/65: Final Project",
+      "programmer": {
+        "bullet1": "Created the game's structure and imported assets.",
+        "bullet2": "Implemented two-player input handling on a single screen.",
+        "bullet3": "Developed difficulty level selection using Scriptable Objects.",
+        "bullet4": "Designed in-game order submission and processing system.",
+        "bullet5": "Implemented post-game scoring and star calculation.",
+        "bullet6": "Created sound effects and implemented scene transitions using Singletons."
+      },
+      "project-manager": {
+        "bullet1": "Presented the project to the course instructor.",
+        "bullet2": "Updated project status, organized meetings, and consolidated team contributions.",
+        "bullet3": "Scheduled project tasks and deadlines.",
+        "bullet4": "Tracked progress using Microsoft Teams tasks.",
+        "bullet5": "Managed project organization before merging into GitHub."
+      }
+    },
+    "dawn": {
+      "title": "Dawn (2023)",
+      "subtitle": "Third-year 2/65: Final Project (Multiplayer)",
+      "programmer": {
+        "bullet1": "Created the game's structure and imported assets.",
+        "bullet2": "Developed the player matchmaking system using Photon.",
+        "bullet3": "Implemented the in-game control system for two players.",
+        "bullet4": "Created the game's elemental system based on the design.",
+        "bullet5": "Developed the player communication system using lag compensation techniques to reduce latency.",
+        "bullet6": "Created the sound system and implemented Singletons for level transitions."
+      },
+      "project-manager": {
+        "bullet1": "Served as a team communication facilitator.",
+        "bullet2": "Provided regular updates, organized meetings, and collected work from team members.",
+        "bullet3": "Created a project schedule for individual task deadlines.",
+        "bullet4": "Tracked progress using Microsoft Teams tasks.",
+        "bullet5": "Managed project organization before merging into GitHub."
+      }
+    }
+  },
+  "About": {
+    "title": {
+      "name": "About Me",
+      "sub1": "Hi, my name is Kowit Narongtuwapan 👋.",
+      "sub2": "I am a Web & Game Developer.",
+      "bullet1": "I'm based in Chiang Mai, Thailand.",
+      "bullet2": "You can contact me at",
+      "general-skill": "General Skills",
+      "web-skill": "Web Developer Skills",
+      "game-skill": "Game Developer Skills"
+    },
+    "soft skill": {
+      "language": {
+        "thai": {
+          "title": "Thai",
+          "description": "Native Language"
+        },
+        "english": {
+          "title": "English",
+          "description1": "Proficient in understanding written and spoken English.",
+          "description2": "Conversational level of English, able to communicate effectively in most situations."
+        }
+      },
+      "bullet1": "Demonstrated leadership skills through experience as a group leader.",
+      "bullet2": "Highly responsible and eager to learn new things."
+    },
+    "skill": {
+      "language": "Languages",
+      "framework": "Frameworks",
+      "library": "Library",
+      "database": "Database",
+      "tool": "Tools",
+      "multiplayer": "Multiplayer"
     }
   },
   "Form": {

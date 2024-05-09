@@ -90,10 +90,10 @@ export default function NavbarContainer() {
                   <span
                     className={theme === 'light' ? 'text-[#0070f0]' : 'text-[#f5a524]'}
                   >
-                    {t('Navbar.header.work')}
+                    {t('Navbar.header.work.title')}
                   </span>
                 ) : (
-                  t('Navbar.header.work')
+                  t('Navbar.header.work.title')
                 )}
                 <RiArrowDropDownLine className="mt-0.5" />
               </Button>
@@ -114,7 +114,7 @@ export default function NavbarContainer() {
                 }}
               >
                 <div className="flex w-full items-center justify-between">
-                  <span>Web Development</span>
+                  <span>{t('Navbar.header.work.web')}</span>
                   <span className="pb-0.5">→</span>
                 </div>
               </DropdownItem>
@@ -127,7 +127,7 @@ export default function NavbarContainer() {
                 }}
               >
                 <div className="flex w-full items-center justify-between">
-                  <span>Game Development</span>
+                  <span>{t('Navbar.header.work.game')}</span>
                   <span className="pb-0.5">→</span>
                 </div>
               </DropdownItem>
@@ -174,13 +174,13 @@ export default function NavbarContainer() {
             router={router}
             theme={theme}
             className="-mr-2 flex items-center gap-1 bg-transparent p-0 text-base data-[hover=true]:bg-transparent"
-            title={t('Navbar.header.work')}
+            title={t('Navbar.header.work.title')}
             content={
               <ul className="ml-4 flex w-full flex-col items-start justify-center gap-y-1">
                 <li>
                   <HeaderMobile
                     href="/work/web-development"
-                    text="Web Development"
+                    text={t('Navbar.header.work.web')}
                     pathname={pathname}
                     theme={theme}
                     router={router}
@@ -190,7 +190,7 @@ export default function NavbarContainer() {
                 <li>
                   <HeaderMobile
                     href="/work/game-development"
-                    text="Game Development"
+                    text={t('Navbar.header.work.game')}
                     pathname={pathname}
                     theme={theme}
                     router={router}

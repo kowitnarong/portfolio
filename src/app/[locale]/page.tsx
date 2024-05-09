@@ -26,23 +26,19 @@ export default function Home() {
   return (
     <main className="flex min-h-[90vh] flex-col items-center justify-start bg-gray-50 px-10 py-4 dark:bg-gray-800 dark:text-gray-100 lg:px-24 lg:pb-10 lg:pt-6">
       <div className="mt-10 flex w-full flex-col items-start font-bold">
-        <span className="text-2xl text-gray-400 dark:drop-shadow-[0_0_0.3rem_#00000070]">
-          Web & Game Developer
+        <span className="text-xl text-gray-400 dark:drop-shadow-[0_0_0.3rem_#00000070]">
+          {t('Home.title.role')}
         </span>
-        <span className="text-4xl text-black dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
-          Kowit Narongtuwapan
+        <span className="mt-1 text-3xl text-black dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
+          {t('Home.title.name')}
         </span>
         <div className="mt-4 text-gray-500 dark:text-gray-400">
-          Get to learn about game development specifically. I can use Unity and Unreal
-          Engine to create games well. Also, I can work on web development.
+          {t('Home.title.description')}
           <br />
           <ul className="mt-2 list-inside list-disc">
-            <li> Developed 3 Unity and 1 Unreal game project at university.</li>
-            <li>I Can use fundamental Maya and Figma. </li>
-            <li>
-              I interned in web development for 1 year (React.js, JavaScript, Typescript,
-              Firebase).
-            </li>
+            <li>{t('Home.title.bullet1')}</li>
+            <li>{t('Home.title.bullet2')}</li>
+            <li>{t('Home.title.bullet3')}</li>
           </ul>
         </div>
       </div>
@@ -56,28 +52,30 @@ export default function Home() {
       </div>
       <div className="mb-5 mt-10 w-full items-center justify-center">
         <span className="flex w-full items-center justify-center text-xl">
-          Web Development Projects
+          {t('Home.web.title')}
         </span>
         <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
           <ImageOverlay
             className="h-80 w-80"
             src={Profile.src}
-            alt="profile"
-            textTitle="Unity"
-            textDescription="Developed 3 Unity game projects at university."
+            href="/work/web-development#muteru"
+            alt="muteru"
+            textTitle={t('Home.web.muteru.title')}
+            textDescription={t('Home.web.muteru.description')}
           />
           <ImageOverlay
             className="h-80 w-80"
             src={Profile.src}
-            alt="profile"
-            textTitle="Unreal"
-            textDescription="Developed 1 Unreal game project at university."
+            href="/work/web-development#net-zero"
+            alt="net zero"
+            textTitle={t('Home.web.net-zero.title')}
+            textDescription={t('Home.web.net-zero.description')}
           />
         </div>
       </div>
       <div className="mb-5 mt-10 w-full items-center justify-center">
         <span className="flex w-full items-center justify-center text-xl">
-          Game Development Projects
+          {t('Home.game.title')}
         </span>
         <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
           <ImageOverlay
@@ -85,32 +83,32 @@ export default function Home() {
             src={Profile.src}
             href="/work/game-development#castle-knight"
             alt="castle knight"
-            textTitle="Castle Knight (2021)"
-            textDescription="Castle Knight เป็นเกมที่เกี่ยวกับการผจญภัย ซึ่งตัวเกมเพลย์หลัก ๆ คือการต่อสู้กับศัตรูภายในฉาก โดยผู้เล่นจะมีความสามารถเพียงแค่โจมตีกับป้องกันเท่านั้น สำหรับการรับมือศัตรูที่มีความสามารถแตกต่างกันออกไป"
+            textTitle={t('Home.game.castle-knight.title')}
+            textDescription={t('Home.game.castle-knight.description')}
           />
           <ImageOverlay
             className="h-80 w-80"
             src={Profile.src}
             href="/work/game-development#demon-hunter"
             alt="demon hunter"
-            textTitle="Demon Hunter (2022)"
-            textDescription="Developed 1 Unreal game project at university."
+            textTitle={t('Home.game.demon-hunter.title')}
+            textDescription={t('Home.game.demon-hunter.description')}
           />
           <ImageOverlay
             className="h-80 w-80"
             src={Profile.src}
             href="/work/game-development#documents-master"
             alt="documents master"
-            textTitle="Documents Master (2023)"
-            textDescription="I Can use fundamental Maya and Figma."
+            textTitle={t('Home.game.documents-master.title')}
+            textDescription={t('Home.game.documents-master.description')}
           />
           <ImageOverlay
             className="h-80 w-80"
             src={Profile.src}
             href="/work/game-development#dawn"
             alt="dawn"
-            textTitle="Dawn (2023)"
-            textDescription="I Can use fundamental Maya and Figma."
+            textTitle={t('Home.game.dawn.title')}
+            textDescription={t('Home.game.dawn.description')}
           />
         </div>
       </div>

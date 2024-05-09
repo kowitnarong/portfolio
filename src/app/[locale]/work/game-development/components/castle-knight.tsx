@@ -1,4 +1,5 @@
 import { Button, Link } from '@nextui-org/react';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 type CastleKnightProps = {
@@ -6,6 +7,8 @@ type CastleKnightProps = {
 };
 
 export const CastleKnight = (props: CastleKnightProps) => {
+  const t = useTranslations();
+
   return (
     <div className="flex w-full flex-col items-center justify-center py-6">
       <div
@@ -23,33 +26,30 @@ export const CastleKnight = (props: CastleKnightProps) => {
           <div className="flex h-auto w-full flex-col lg:w-[40%]">
             <span className="text-2xl font-bold">Castle Knight (2021)</span>
             <span className="text-base text-gray-500">
-              Second-year 1/64: Final Project
+              {t('Game.castle-knight.subtitle')}
             </span>
-            <span className="mt-6 text-xl font-bold">Overview</span>
+            <span className="mt-6 text-xl font-bold"> {t('Game.overview')}</span>
             <span className="text-base text-gray-400">
-              Castle Knight เป็นเกม 2D Side-scroller ที่เกี่ยวกับการผจญภัย
-              ซึ่งตัวเกมเพลย์หลัก ๆ คือการต่อสู้กับศัตรูภายในฉาก
-              โดยผู้เล่นจะมีความสามารถเพียงแค่โจมตีกับป้องกันเท่านั้น
-              สำหรับการรับมือศัตรูที่มีความสามารถแตกต่างกันออกไป
+              {t('Home.game.castle-knight.description')}
             </span>
             <span className="mt-2 text-lg font-bold">
-              Number of Players:{' '}
+              {t('Game.numOfPlayers')}:{' '}
               <span className="text-base font-normal text-gray-400">1</span>
             </span>
             <span className="mt-6 text-lg font-bold">
-              Role:{' '}
+              {t('Game.role')}:{' '}
               <span className="text-base font-normal text-gray-400">
                 Programmer, Project Manager, 2D Pixel Artist
               </span>
             </span>
             <span className="text-lg font-bold">
-              Tools:{' '}
+              {t('Game.tools')}:{' '}
               <span className="text-base font-normal text-gray-400">
                 Monogame C#, Git, Microsoft Teams, Photoshop,
               </span>
             </span>
             <span className="text-lg font-bold">
-              Team size:{' '}
+              {t('Game.teamSize')}:{' '}
               <span className="text-base font-normal text-gray-400">
                 4 (1 Programer, 2 Artists, 1 Game Designer)
               </span>
@@ -66,12 +66,12 @@ export const CastleKnight = (props: CastleKnightProps) => {
                   color={props.theme === 'light' ? 'primary' : 'warning'}
                   className="text-base font-normal"
                 >
-                  Click here!
+                  {t('Game.button.click')}
                 </Button>
               </span>
             </span>
             <span className="mt-4 hidden items-center text-lg font-bold lg:flex">
-              Play this game:
+              {t('Game.play')}:
               <span className="ml-2 text-base font-normal text-gray-400">
                 <Button
                   as={Link}
@@ -82,7 +82,7 @@ export const CastleKnight = (props: CastleKnightProps) => {
                   color={props.theme === 'light' ? 'primary' : 'warning'}
                   className="text-base font-normal"
                 >
-                  Download!
+                  {t('Game.button.download')}
                 </Button>
               </span>
             </span>
@@ -90,35 +90,35 @@ export const CastleKnight = (props: CastleKnightProps) => {
 
           <div className="mt-6 flex h-auto w-full flex-col lg:mt-0 lg:w-[40%]">
             <span className="flex justify-center text-xl font-bold">
-              Responsible work
+              {t('Game.respon')}
             </span>
             <span className="mt-2 text-lg">
               Programmer
               <ul className="ml-2 list-inside list-disc text-base text-gray-400">
-                <li>สร้างโครงร่างของเกม และการนำเข้า Assets</li>
-                <li>สร้างระบบการรับค่าจากผู้เล่น</li>
-                <li>สร้างระบบการต่อสู้ของตัวละคร ระบบเลือด</li>
-                <li>สร้างพฤติกรรมของศัตรู และเงื่อนไขการทำงานต่าง ๆ ภายในเกม</li>
-                <li>สร้างระบบการเปลี่ยนฉาก ระบบเสียง และระบบเซฟข้อมูล</li>
+                <li>{t('Game.castle-knight.programmer.bullet1')}</li>
+                <li>{t('Game.castle-knight.programmer.bullet2')}</li>
+                <li>{t('Game.castle-knight.programmer.bullet3')}</li>
+                <li>{t('Game.castle-knight.programmer.bullet4')}</li>
+                <li>{t('Game.castle-knight.programmer.bullet5')}</li>
               </ul>
             </span>
 
             <span className="mt-6 text-lg">
               Project Manager
               <ul className="ml-2 list-inside list-disc text-base text-gray-400">
-                <li>สร้างปฏิทินสำหรับกำหนดการส่งงานของแต่ละคน</li>
-                <li>ติดตามงานผ่าน Tasks ใน Microsoft Teams</li>
-                <li>คอยอัพเดตงาน จัดการประชุม และรวบรวมงานจากคนในทีม</li>
-                <li>จัดการความเป็นระเบียบของงานก่อน Merge เข้า GitHub</li>
+                <li>{t('Game.castle-knight.project-manager.bullet1')}</li>
+                <li>{t('Game.castle-knight.project-manager.bullet2')}</li>
+                <li>{t('Game.castle-knight.project-manager.bullet3')}</li>
+                <li>{t('Game.castle-knight.project-manager.bullet4')}</li>
               </ul>
             </span>
 
             <span className="mt-6 text-lg">
               2D Pixel Artist
               <ul className="ml-2 list-inside list-disc text-base text-gray-400">
-                <li>วาด Animation การเดิน และการโจมตีของตัวละคร</li>
-                <li>วาด Animation ต่าง ๆ ของ ศัตรู</li>
-                <li>วาด Effect ต่าง ๆ ในเกม</li>
+                <li>{t('Game.castle-knight.pixel-artist.bullet1')}</li>
+                <li>{t('Game.castle-knight.pixel-artist.bullet2')}</li>
+                <li>{t('Game.castle-knight.pixel-artist.bullet3')}</li>
               </ul>
             </span>
 
@@ -134,12 +134,12 @@ export const CastleKnight = (props: CastleKnightProps) => {
                   color={props.theme === 'light' ? 'primary' : 'warning'}
                   className="text-base font-normal"
                 >
-                  Click here!
+                  {t('Game.button.click')}
                 </Button>
               </span>
             </span>
             <span className="mt-4 flex items-center text-lg font-bold lg:hidden">
-              Play this game:
+              {t('Game.play')}:
               <span className="ml-2 text-base font-normal text-gray-400">
                 <Button
                   as={Link}
@@ -150,7 +150,7 @@ export const CastleKnight = (props: CastleKnightProps) => {
                   color={props.theme === 'light' ? 'primary' : 'warning'}
                   className="text-base font-normal"
                 >
-                  Download!
+                  {t('Game.button.download')}
                 </Button>
               </span>
             </span>
