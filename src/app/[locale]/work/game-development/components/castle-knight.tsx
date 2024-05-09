@@ -9,7 +9,7 @@ export const CastleKnight = (props: CastleKnightProps) => {
   return (
     <div className="flex w-full flex-col items-center justify-center py-6">
       <div
-        id="castle-knight"
+        id="#castle-knight"
         className="flex w-full flex-col items-center justify-center"
       >
         <Image

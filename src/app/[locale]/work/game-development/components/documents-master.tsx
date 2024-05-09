@@ -9,7 +9,7 @@ export const DocumentsMaster = (props: DocumentsMasterProps) => {
   return (
     <div className="flex w-full flex-col items-center justify-center py-6">
       <div
-        id="documents-master"
+        id="#documents-master"
         className="flex w-full flex-col items-center justify-center"
       >
         <Image

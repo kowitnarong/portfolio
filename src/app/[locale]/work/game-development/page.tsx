@@ -33,7 +33,7 @@ export default function GameDevelopmentPage() {
     <main
       className={
         styles.fadeIn +
-        ' flex min-h-[90vh] flex-col items-center justify-start bg-gray-50 px-10 py-4 text-gray-900 dark:bg-gray-800 dark:text-gray-100 lg:px-24 lg:py-10'
+        ' flex min-h-[90vh] flex-col items-center justify-start scroll-smooth bg-gray-50 px-10 py-4 text-gray-900 dark:bg-gray-800 dark:text-gray-100 lg:px-24 lg:py-10'
       }
     >
       <CastleKnight theme={theme} />

@@ -83,22 +83,33 @@ export default function Home() {
           <ImageOverlay
             className="h-80 w-80"
             src={Profile.src}
-            alt="profile"
+            href="/work/game-development#castle-knight"
+            alt="castle knight"
             textTitle="Castle Knight (2021)"
             textDescription="Castle Knight เป็นเกมที่เกี่ยวกับการผจญภัย ซึ่งตัวเกมเพลย์หลัก ๆ คือการต่อสู้กับศัตรูภายในฉาก โดยผู้เล่นจะมีความสามารถเพียงแค่โจมตีกับป้องกันเท่านั้น สำหรับการรับมือศัตรูที่มีความสามารถแตกต่างกันออกไป"
           />
           <ImageOverlay
             className="h-80 w-80"
             src={Profile.src}
-            alt="profile"
-            textTitle="Unreal"
+            href="/work/game-development#demon-hunter"
+            alt="demon hunter"
+            textTitle="Demon Hunter (2022)"
             textDescription="Developed 1 Unreal game project at university."
           />
           <ImageOverlay
             className="h-80 w-80"
             src={Profile.src}
-            alt="profile"
-            textTitle="Figma"
+            href="/work/game-development#documents-master"
+            alt="documents master"
+            textTitle="Documents Master (2023)"
+            textDescription="I Can use fundamental Maya and Figma."
+          />
+          <ImageOverlay
+            className="h-80 w-80"
+            src={Profile.src}
+            href="/work/game-development#dawn"
+            alt="dawn"
+            textTitle="Dawn (2023)"
             textDescription="I Can use fundamental Maya and Figma."
           />
         </div>

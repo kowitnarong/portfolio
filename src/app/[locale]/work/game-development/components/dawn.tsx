@@ -8,7 +8,7 @@ type DawnProps = {
 export const Dawn = (props: DawnProps) => {
   return (
     <div className="flex w-full flex-col items-center justify-center py-6">
-      <div id="dawn" className="flex w-full flex-col items-center justify-center">
+      <div id="#dawn" className="flex w-full flex-col items-center justify-center">
         <Image
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSf7_Y6CCfwmyGMQlxUcJNB3Dz6Vlc6iyfEciG1WDLDQ&s"
           alt="game-development"

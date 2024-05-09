@@ -8,7 +8,7 @@ type NetZeroProps = {
 export const NetZero = (props: NetZeroProps) => {
   return (
     <div className="flex w-full flex-col items-center justify-center py-6">
-      <div id="net-zero" className="flex w-full flex-col items-center justify-center">
+      <div id="#net-zero" className="flex w-full flex-col items-center justify-center">
         <Image
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSf7_Y6CCfwmyGMQlxUcJNB3Dz6Vlc6iyfEciG1WDLDQ&s"
           alt="game-development"
@@ -20,15 +20,14 @@ export const NetZero = (props: NetZeroProps) => {
           <div className="flex h-auto w-full flex-col lg:w-[40%]">
             <span className="text-2xl font-bold">Net Zero (2024)</span>
             <span className="text-base text-gray-500">
-              Web Application สำหรับการท่องเที่ยว
+              Web Application สำหรับแสดงค่าการใช้คาร์บอน
             </span>
             <span className="mt-6 text-xl font-bold">Overview</span>
             <span className="text-base text-gray-400">
-              Muteru
-              แอพพลิเคชั่นสำหรับนักเดินทางที่สนใจในโชคลาภและไสยศาสตร์ผ่านเส้นทางการเดินทาง
-              เสริมความรัก และความศรัทธา ไม่ว่าจะเส้นทางไหน มูเตลู
-              จะช่วยเสริมดวงชะตาให้ชีวิตคุณประสบความสำเร็จทั้งด้านการงาน การงาน
-              และชีวิตส่วนตัว
+              Net Zero เป็น Web Application
+              สำหรับแสดงค่าการใช้คาร์บอนที่ถูกใช้งานในมหาวิทยาลัยเชียงใหม่ โดยค่าต่าง ๆ
+              จะแบ่งตามคณะ และสถานที่ในมหาวิทยาลัย หน้าเว็บไซต์จะแสดงเป็น Dashboard
+              ควบคู่การใช้ 3D แสดงเป็นแผนที่
             </span>
 
             <span className="mt-6 text-lg font-bold">
@@ -45,14 +44,12 @@ export const NetZero = (props: NetZeroProps) => {
             </span>
             <span className="text-lg font-bold">
               Library:{' '}
-              <span className="text-base font-normal text-gray-400">
-                Axios, Three.js, Phaser.js
-              </span>
+              <span className="text-base font-normal text-gray-400">Axios, Three.js</span>
             </span>
             <span className="text-lg font-bold">
               Team size:{' '}
               <span className="text-base font-normal text-gray-400">
-                7 (1 Project Manager, 1 Art Director, 2 Programmer, 3 Artist)
+                8 (1 Project Manager, 1 Art Director, 3 Programmer, 3 Artist)
               </span>
             </span>
 
@@ -61,7 +58,7 @@ export const NetZero = (props: NetZeroProps) => {
               <span className="ml-2 text-base font-normal text-gray-400">
                 <Button
                   as={Link}
-                  href="https://camt-muteru.web.app"
+                  href="https://netzero-cmu.web.app"
                   target="_blank"
                   isExternal
                   size="sm"
@@ -82,11 +79,10 @@ export const NetZero = (props: NetZeroProps) => {
               Frontend
               <ul className="ml-2 list-inside list-disc text-base text-gray-400">
                 <li>สร้างหน้าตาเว็บไชต์ตามการออกแบบใน Figma</li>
-                <li>ใช้ Three.js ในการสร้างเกม 3D บนเว็บไซต์</li>
-                <li>ใช้ Phaser.js ในการสร้างเกม 2D บนเว็บไซต์</li>
-                <li>นำการตั้งค่าต่าง ๆ จาก Firebase มาใช้</li>
+                <li>สร้างหน้าต่างเมนูในเว็บไซต์</li>
+                <li>นำค่าต่าง ๆ ในไฟล์ JSON มาจัดเรียงใหม่</li>
                 <li>สร้างระบบการเปลี่ยนภาษา และ font</li>
-                <li>สร้างหน้าต่าง Backoffice สำหรับ Staff, Admin</li>
+                <li>สร้างหน้าต่าง Backoffice สำหรับ Admin</li>
               </ul>
             </span>
 
@@ -96,23 +92,11 @@ export const NetZero = (props: NetZeroProps) => {
                 <li>สร้างฐานข้อมูลใน Firebase</li>
                 <li>ออกแบบฐานข้อมูลแบบ Relational Database</li>
                 <li>
-                  ออกแบบการเก็บข้อมูลให้รองรับการขยายตัว และสามรถเก็บ Activity
-                  ของผู้ใช้งาน
+                  ใช้ Firebase Cloud Functions และ Realtime
+                  สำหรับการรับข้อมูลจากฐานข้อมูลส่วนอื่น ๆ
                 </li>
                 <li>สร้าง API ของ Firebase สำหรับการส่งค่าไปยังหน้าบ้าน</li>
-                <li>สร้างระบบ Authentication สำหรับการลงชื่อเข้าใช้ผ่าน Third Party</li>
-                <li>จัดการส่งค่า API ไปยังแอปพลิเคชันอื่น ๆ ที่อยู่ในโครงการ</li>
-                <li>สร้างระบบ Token สำหรับการให้รางวัลกับผู้ใช้งาน</li>
-              </ul>
-            </span>
-
-            <span className="mt-6 text-lg">
-              อื่น ๆ
-              <ul className="ml-2 list-inside list-disc text-base text-gray-400">
-                <li>
-                  นำเสนอ และเข้าร่วมการประชุมกับทีมอื่น ๆ เพื่อหารือเกี่ยวกับการสร้าง API
-                </li>
-                <li>ลงพื้นที่ และทดสอบปัญหากับผู้ใช้งานจริง</li>
+                <li>สร้างระบบการส่ง Email ไปยังผู้ใช้งานหากมีค่าที่รับมาผิดปกติ</li>
               </ul>
             </span>
 
@@ -121,7 +105,7 @@ export const NetZero = (props: NetZeroProps) => {
               <span className="ml-2 text-base font-normal text-gray-400">
                 <Button
                   as={Link}
-                  href="https://camt-muteru.web.app"
+                  href="https://netzero-cmu.web.app"
                   target="_blank"
                   isExternal
                   size="sm"

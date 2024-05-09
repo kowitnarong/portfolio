@@ -15,4 +15,13 @@ export const InitPage = async (props: InitPageProps) => {
   setMenuUIIsShow(props.menuUIIsShow.isShowHeader, props.menuUIIsShow.isShowFooter);
   await HelperTime.WaitForMilliSecond(props.loadTimeout);
   setIsLoading(false);
+
+  await scrollIntoView(window.location.hash);
+};
+
+const scrollIntoView = async (id: string) => {
+  const el = document.getElementById(id);
+  if (el) {
+    window.scrollTo({ top: el.offsetTop - 100, behavior: 'smooth' });
+  }
 };

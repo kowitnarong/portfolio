@@ -1,8 +1,14 @@
+'use client';
+
 import React, { useState } from 'react';
 import styles from './styles/image-overlay.module.css';
 import Image from 'next/image';
+import { useRouter } from '@/core/navigation/navigation';
+import { UseStoreGlobal } from '@/globals/stores/session/session';
+import { Button } from '@nextui-org/react';
 
 type ImageOverlayProps = {
+  href?: string | undefined;
   src: string;
   alt: string;
   textTitle: string;
@@ -11,6 +17,8 @@ type ImageOverlayProps = {
 };
 
 export const ImageOverlay = (props: ImageOverlayProps) => {
+  const { isMobile } = UseStoreGlobal(['isMobile']);
+  const router = useRouter();
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => setIsHovered(true);
@@ -18,6 +26,9 @@ export const ImageOverlay = (props: ImageOverlayProps) => {
 
   return (
     <div
+      onPointerDown={() => {
+        !isMobile && props.href !== undefined && router.push(props.href);
+      }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className={`${styles.container} ${props.className}` + ' shadow-md'}
@@ -26,6 +37,22 @@ export const ImageOverlay = (props: ImageOverlayProps) => {
         <div className={styles.text + ' rounded-b-xl'}>
           <p className={styles.title}>{props.textTitle}</p>
           <p className={styles.description}>{props.textDescription}</p>
+          <div
+            className={
+              `${isMobile && props.href !== undefined ? 'flex' : 'hidden'}` +
+              ' w-full items-center justify-end'
+            }
+          >
+            <Button
+              size="sm"
+              color="primary"
+              onPress={() => {
+                props.href !== undefined && router.push(props.href);
+              }}
+            >
+              More
+            </Button>
+          </div>
         </div>
       )}
       <Image

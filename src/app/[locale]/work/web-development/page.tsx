@@ -5,7 +5,7 @@ import { HelperInit } from '@/globals/helpers/helpers';
 import { useEffect, useState } from 'react';
 import styles from './web-development.module.css';
 import { useTheme } from 'next-themes';
-import { Muteru } from './components/mutelu';
+import { Muteru } from './components/muteru';
 import { NetZero } from './components/net-zero';
 
 export default function WebDevelopmentPage() {
