@@ -36,8 +36,8 @@ export default function AboutPage() {
       <div className="mb-8 mt-4 text-4xl font-bold text-black dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
         {t('About.title.name')}
       </div>
-      <div className="flex w-full flex-col items-center justify-center lg:flex-row">
-        <div className="flex w-full max-w-[360px] justify-center px-4 lg:w-[40%] lg:max-w-[480px] lg:justify-end">
+      <div className="flex w-full max-w-[1280px] flex-col items-center justify-center lg:flex-row">
+        <div className="flex w-full max-w-[360px] justify-center px-4 lg:mr-6 lg:w-[40%] lg:max-w-[480px] lg:justify-end">
           <Image
             priority
             src={Profile.src}

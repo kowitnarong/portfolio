@@ -10,7 +10,7 @@ export const Dawn = (props: DawnProps) => {
   const t = useTranslations();
 
   return (
-    <div className="flex w-full flex-col items-center justify-center py-6">
+    <div className="flex w-full max-w-[1024px] flex-col items-center justify-center py-6">
       <div id="#dawn" className="flex w-full flex-col items-center justify-center">
         <Image
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSf7_Y6CCfwmyGMQlxUcJNB3Dz6Vlc6iyfEciG1WDLDQ&s"
@@ -20,7 +20,7 @@ export const Dawn = (props: DawnProps) => {
           height={200}
         />
         <div className="flex h-auto w-full flex-col items-start justify-center gap-x-6 p-2 lg:flex-row lg:p-10">
-          <div className="flex h-auto w-full flex-col lg:w-[40%]">
+          <div className="flex h-auto w-full flex-col lg:w-[45%]">
             <span className="text-2xl font-bold">Dawn (2023)</span>
             <span className="text-base text-[#595959] dark:text-[#B8B8B8]">
               {t('Game.dawn.subtitle')}
@@ -87,7 +87,7 @@ export const Dawn = (props: DawnProps) => {
             </span>
           </div>
 
-          <div className="mt-2 flex h-auto w-full flex-col lg:mt-0 lg:w-[40%]">
+          <div className="mt-2 flex h-auto w-full flex-col lg:mt-0 lg:w-[45%]">
             <span className="flex justify-center text-xl font-bold">
               {t('Game.respon')}
             </span>

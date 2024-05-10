@@ -20,14 +20,17 @@ export default function ResumePage() {
 
   const [width, setWidth] = useState(0);
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setWidth(window.innerWidth - 50);
-      const handleResize = () => setWidth(window.innerWidth - 50);
-      window.addEventListener('resize', handleResize);
-      return () => window.removeEventListener('resize', handleResize);
+  const handleResize = () => {
+    const container = document.getElementById('pdf-container');
+    if (container) {
+      const containerWidth = container.offsetWidth;
+      if (containerWidth > 960) {
+        setWidth(960);
+      } else {
+        setWidth(containerWidth);
+      }
     }
-  }, []);
+  };
 
   useEffect(() => {
     HelperInit.InitPage({
@@ -48,7 +51,19 @@ export default function ResumePage() {
 
   const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => setIsMounted(true), []);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (isMounted) {
+      handleResize();
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, [isMounted]);
 
   if (!isMounted) return null;
 
@@ -59,9 +74,15 @@ export default function ResumePage() {
         ' flex min-h-[90vh] flex-col items-center justify-start scroll-smooth bg-gray-50 px-10 py-4 text-gray-900 dark:bg-gray-800 dark:text-gray-100 lg:px-24 lg:py-10'
       }
     >
-      <div className="mb-3 text-2xl font-bold">{t('Resume.title')}</div>
-      <div className="flex h-full w-full select-none items-center justify-center overflow-clip rounded-md shadow-lg">
-        <Document file={pdfURL}>
+      <div className="mb-8 mt-4 text-4xl font-bold">{t('Resume.title')}</div>
+      <div
+        id="pdf-container"
+        className="flex h-full w-full select-none items-center justify-center"
+      >
+        <Document
+          className="w-full max-w-[960px] overflow-clip rounded-md shadow-lg"
+          file={pdfURL}
+        >
           <Page width={width} pageNumber={1} />
         </Document>
       </div>
