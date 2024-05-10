@@ -25,38 +25,40 @@ export const CastleKnight = (props: CastleKnightProps) => {
         <div className="flex h-auto w-full flex-col items-start justify-center gap-x-6 p-2 lg:flex-row lg:p-10">
           <div className="flex h-auto w-full flex-col lg:w-[40%]">
             <span className="text-2xl font-bold">Castle Knight (2021)</span>
-            <span className="text-base text-gray-500">
+            <span className="text-base text-[#595959] dark:text-[#B8B8B8]">
               {t('Game.castle-knight.subtitle')}
             </span>
             <span className="mt-6 text-xl font-bold"> {t('Game.overview')}</span>
-            <span className="text-base text-gray-400">
+            <span className="text-base text-[#595959] dark:text-[#B8B8B8]">
               {t('Home.game.castle-knight.description')}
             </span>
             <span className="mt-2 text-lg font-bold">
               {t('Game.numOfPlayers')}:{' '}
-              <span className="text-base font-normal text-gray-400">1</span>
+              <span className="text-base font-normal text-[#595959] dark:text-[#B8B8B8]">
+                1
+              </span>
             </span>
             <span className="mt-6 text-lg font-bold">
               {t('Game.role')}:{' '}
-              <span className="text-base font-normal text-gray-400">
+              <span className="text-base font-normal text-[#595959] dark:text-[#B8B8B8]">
                 Programmer, Project Manager, 2D Pixel Artist
               </span>
             </span>
             <span className="text-lg font-bold">
               {t('Game.tools')}:{' '}
-              <span className="text-base font-normal text-gray-400">
+              <span className="text-base font-normal text-[#595959] dark:text-[#B8B8B8]">
                 Monogame C#, Git, Microsoft Teams, Photoshop,
               </span>
             </span>
             <span className="text-lg font-bold">
               {t('Game.teamSize')}:{' '}
-              <span className="text-base font-normal text-gray-400">
+              <span className="text-base font-normal text-[#595959] dark:text-[#B8B8B8]">
                 4 (1 Programer, 2 Artists, 1 Game Designer)
               </span>
             </span>
             <span className="mt-6 hidden items-center text-lg font-bold lg:flex">
               Git Repository:
-              <span className="ml-2 text-base font-normal text-gray-400">
+              <span className="ml-2 text-base font-normal text-[#595959] dark:text-[#B8B8B8]">
                 <Button
                   as={Link}
                   href="https://github.com/kowitnarong/Castle-Knight_Monogame"
@@ -72,7 +74,7 @@ export const CastleKnight = (props: CastleKnightProps) => {
             </span>
             <span className="mt-4 hidden items-center text-lg font-bold lg:flex">
               {t('Game.play')}:
-              <span className="ml-2 text-base font-normal text-gray-400">
+              <span className="ml-2 text-base font-normal text-[#595959] dark:text-[#B8B8B8]">
                 <Button
                   as={Link}
                   href="https://github.com/kowitnarong/Castle-Knight_Monogame/releases/download/release-v1_1_1/release-v1_1_1.zip"
@@ -94,7 +96,7 @@ export const CastleKnight = (props: CastleKnightProps) => {
             </span>
             <span className="mt-2 text-lg">
               Programmer
-              <ul className="ml-2 list-inside list-disc text-base text-gray-400">
+              <ul className="ml-2 list-inside list-disc text-base text-[#595959] dark:text-[#B8B8B8]">
                 <li>{t('Game.castle-knight.programmer.bullet1')}</li>
                 <li>{t('Game.castle-knight.programmer.bullet2')}</li>
                 <li>{t('Game.castle-knight.programmer.bullet3')}</li>
@@ -105,7 +107,7 @@ export const CastleKnight = (props: CastleKnightProps) => {
 
             <span className="mt-6 text-lg">
               Project Manager
-              <ul className="ml-2 list-inside list-disc text-base text-gray-400">
+              <ul className="ml-2 list-inside list-disc text-base text-[#595959] dark:text-[#B8B8B8]">
                 <li>{t('Game.castle-knight.project-manager.bullet1')}</li>
                 <li>{t('Game.castle-knight.project-manager.bullet2')}</li>
                 <li>{t('Game.castle-knight.project-manager.bullet3')}</li>
@@ -115,7 +117,7 @@ export const CastleKnight = (props: CastleKnightProps) => {
 
             <span className="mt-6 text-lg">
               2D Pixel Artist
-              <ul className="ml-2 list-inside list-disc text-base text-gray-400">
+              <ul className="ml-2 list-inside list-disc text-base text-[#595959] dark:text-[#B8B8B8]">
                 <li>{t('Game.castle-knight.pixel-artist.bullet1')}</li>
                 <li>{t('Game.castle-knight.pixel-artist.bullet2')}</li>
                 <li>{t('Game.castle-knight.pixel-artist.bullet3')}</li>
@@ -124,7 +126,7 @@ export const CastleKnight = (props: CastleKnightProps) => {
 
             <span className="mt-6 flex items-center text-lg font-bold lg:hidden">
               Git Repository:
-              <span className="ml-2 text-base font-normal text-gray-400">
+              <span className="ml-2 text-base font-normal text-[#595959] dark:text-[#B8B8B8]">
                 <Button
                   as={Link}
                   href="https://github.com/kowitnarong/Castle-Knight_Monogame"
@@ -140,7 +142,7 @@ export const CastleKnight = (props: CastleKnightProps) => {
             </span>
             <span className="mt-4 flex items-center text-lg font-bold lg:hidden">
               {t('Game.play')}:
-              <span className="ml-2 text-base font-normal text-gray-400">
+              <span className="ml-2 text-base font-normal text-[#595959] dark:text-[#B8B8B8]">
                 <Button
                   as={Link}
                   href="https://github.com/kowitnarong/Castle-Knight_Monogame/releases/download/release-v1_1_1/release-v1_1_1.zip"

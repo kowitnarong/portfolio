@@ -18,12 +18,15 @@ export default function ResumePage() {
   const { theme } = useTheme();
   const pdfURL = '/files/kowit-resume.pdf';
 
-  const [width, setWidth] = useState(window.innerWidth - 50);
+  const [width, setWidth] = useState(0);
 
   useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth - 50);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    if (typeof window !== 'undefined') {
+      setWidth(window.innerWidth - 50);
+      const handleResize = () => setWidth(window.innerWidth - 50);
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
   }, []);
 
   useEffect(() => {

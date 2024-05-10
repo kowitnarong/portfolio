@@ -66,7 +66,7 @@ export default function AboutPage() {
               {t('About.title.bullet2')}{' '}
               <Link
                 href="mailto:kowit.narongtuwapan@hotmail.com"
-                className="font-bold underline"
+                className="font-bold text-[#004ECC] underline dark:text-white"
               >
                 kowit.narongtuwapan@hotmail.com
               </Link>
