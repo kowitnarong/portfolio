@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
 import { ImageOverlay } from '../components/image/image-overlay';
 import Profile from '../assets/profile.webp';
+import Link from 'next/link';
 
 export default function Home() {
   const t = useTranslations();
@@ -34,6 +35,14 @@ export default function Home() {
         </span>
         <div className="mt-4 text-gray-500 dark:text-gray-400">
           {t('Home.title.description')}
+          <br /> <br />
+          {t('About.title.bullet2')}{' '}
+          <Link
+            href="mailto:kowit.narongtuwapan@hotmail.com"
+            className="font-bold underline"
+          >
+            kowit.narongtuwapan@hotmail.com
+          </Link>
           <br />
           <ul className="mt-2 list-inside list-disc">
             <li>{t('Home.title.bullet1')}</li>
