@@ -82,13 +82,15 @@ export default function NavbarContainer() {
               <Button
                 style={{ fontSize: 'min(max(0.75rem, 1.1vw), 1rem)' }}
                 disableRipple
-                className="-mr-2 flex items-center gap-1 bg-transparent p-0 data-[hover=true]:bg-transparent"
-                radius="sm"
+                className="-ml-1 -mr-5 mt-0.5 flex items-center gap-1 bg-transparent data-[hover=true]:bg-transparent"
                 variant="light"
               >
                 {pathname.includes('/work') ? (
                   <span
-                    className={theme === 'light' ? 'text-[#0070f0]' : 'text-[#f5a524]'}
+                    className={
+                      `${theme === 'light' ? 'text-[#0070f0]' : 'text-[#f5a524]'}` +
+                      ' font-bold'
+                    }
                   >
                     {t('Navbar.header.work.title')}
                   </span>
@@ -136,6 +138,15 @@ export default function NavbarContainer() {
         </NavbarItem>
         <NavbarItem>
           <Header
+            headerText={t('Navbar.header.resume')}
+            navigationPathname="/resume"
+            pathname={pathname}
+            theme={theme}
+            router={router}
+          />
+        </NavbarItem>
+        <NavbarItem>
+          <Header
             headerText={t('Navbar.header.about')}
             navigationPathname="/about"
             pathname={pathname}
@@ -176,7 +187,7 @@ export default function NavbarContainer() {
             className="-mr-2 flex items-center gap-1 bg-transparent p-0 text-base data-[hover=true]:bg-transparent"
             title={t('Navbar.header.work.title')}
             content={
-              <ul className="ml-4 flex w-full flex-col items-start justify-center gap-y-1">
+              <ul className="my-1 ml-4 flex w-full flex-col items-start justify-center gap-y-1">
                 <li>
                   <HeaderMobile
                     href="/work/web-development"
@@ -199,6 +210,16 @@ export default function NavbarContainer() {
                 </li>
               </ul>
             }
+          />
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <HeaderMobile
+            href="/resume"
+            text={t('Navbar.header.resume')}
+            pathname={pathname}
+            theme={theme}
+            router={router}
+            setIsMenuOpen={(isMenuOpen) => setIsMenuOpen(isMenuOpen)}
           />
         </NavbarMenuItem>
         <NavbarMenuItem>

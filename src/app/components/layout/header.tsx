@@ -11,7 +11,10 @@ type HeaderProps = {
 export const Header = (props: HeaderProps) => {
   return (
     <Link
-      className="cursor-pointer"
+      className={
+        `${props.pathname === props.navigationPathname ? 'font-bold' : 'font-normal'}` +
+        ' cursor-pointer'
+      }
       color={
         props.pathname === props.navigationPathname
           ? props.theme === 'light'

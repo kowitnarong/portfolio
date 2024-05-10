@@ -37,7 +37,7 @@ export const NetZero = (props: NetZeroProps) => {
             <span className="text-lg font-bold">
               {t('Web.framework')}:{' '}
               <span className="text-base font-normal text-gray-400">
-                React, Tailwind CSS, Firebase, TypeScript
+                React, TailwindCSS, Firebase, TypeScript
               </span>
             </span>
             <span className="text-lg font-bold">

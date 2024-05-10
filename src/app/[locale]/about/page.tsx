@@ -122,7 +122,7 @@ export default function AboutPage() {
             <ul className="list-inside list-disc">
               <li>
                 <span className="font-bold">{t('About.skill.tool')}:</span> Unity,
-                Monogame, Unreal Engine (Visual Scripting), Phaser 2D (JavaScript)
+                MonoGame, Unreal Engine (Visual Scripting), Phaser 2D (JavaScript)
               </li>
               <li>
                 <span className="font-bold">{t('About.skill.multiplayer')}:</span> Photon

@@ -47,6 +47,7 @@
         "web": "Web Development",
         "game": "Game Development"
       },
+      "resume": "Resume",
       "about": "About"
     }
   },
@@ -193,6 +194,13 @@
         "bullet4": "Tracked progress using Microsoft Teams tasks.",
         "bullet5": "Managed project organization before merging into GitHub."
       }
+    }
+  },
+  "Resume": {
+    "title": "Resume",
+    "button": {
+      "newTab": "Open in new tab",
+      "download": "Download"
     }
   },
   "About": {
