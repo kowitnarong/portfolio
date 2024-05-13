@@ -1,6 +1,7 @@
+import { Slideshow, SlideshowProps } from '@/app/components/image/slideshow';
 import { Button, Link } from '@nextui-org/react';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
+import CastleKnightJSON from './่json/castle-knight.json';
 
 type CastleKnightProps = {
   theme: string | undefined;
@@ -9,26 +10,27 @@ type CastleKnightProps = {
 export const CastleKnight = (props: CastleKnightProps) => {
   const t = useTranslations();
 
+  const slideshowList: SlideshowProps['hrefList'] = CastleKnightJSON.map((item) => ({
+    ...item,
+    type: item.type === 'image' || item.type === 'video' ? item.type : 'image',
+  }));
+
   return (
     <div className="flex w-full max-w-[1024px] flex-col items-center justify-center py-6">
       <div
         id="#castle-knight"
         className="flex w-full flex-col items-center justify-center"
       >
-        <Image
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSf7_Y6CCfwmyGMQlxUcJNB3Dz6Vlc6iyfEciG1WDLDQ&s"
-          alt="game-development"
-          priority
-          width={200}
-          height={200}
-        />
         <div className="flex h-auto w-full flex-col items-start justify-center gap-x-6 p-2 lg:flex-row lg:p-10">
           <div className="flex h-auto w-full flex-col lg:w-[45%]">
             <span className="text-2xl font-bold">Castle Knight (2021)</span>
             <span className="text-base text-[#595959] dark:text-[#B8B8B8]">
               {t('Game.castle-knight.subtitle')}
             </span>
-            <span className="mt-6 text-xl font-bold"> {t('Game.overview')}</span>
+
+            <Slideshow hrefList={slideshowList} />
+
+            <span className="text-xl font-bold"> {t('Game.overview')}</span>
             <span className="text-base text-[#595959] dark:text-[#B8B8B8]">
               {t('Home.game.castle-knight.description')}
             </span>

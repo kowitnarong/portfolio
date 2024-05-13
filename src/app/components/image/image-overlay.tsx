@@ -26,7 +26,7 @@ export const ImageOverlay = (props: ImageOverlayProps) => {
 
   return (
     <div
-      onPointerDown={() => {
+      onClick={() => {
         !isMobile && props.href !== undefined && router.push(props.href);
       }}
       onMouseEnter={handleMouseEnter}
@@ -36,7 +36,7 @@ export const ImageOverlay = (props: ImageOverlayProps) => {
         ' shadow-md'
       }
     >
-      {isHovered && (
+      {isHovered ? (
         <div className={styles.text + ' rounded-b-xl'}>
           <p className={styles.title}>{props.textTitle}</p>
           <p className={styles.description}>{props.textDescription}</p>
@@ -56,6 +56,10 @@ export const ImageOverlay = (props: ImageOverlayProps) => {
               More
             </Button>
           </div>
+        </div>
+      ) : (
+        <div className={styles.textNoAnimation + ' rounded-b-xl'}>
+          <p className={styles.title}>{props.textTitle}</p>
         </div>
       )}
       <Image

@@ -1,0 +1,51 @@
+.fadeIn {
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  animation-name: fadeIn;
+}
+
+.imageTopContainer {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.customScrollbar {
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: auto;
+  scrollbar-color: #c6d4df #2a475e;
+}
+
+.customScrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.customScrollbar::-webkit-scrollbar-track {
+  background: #2a475e;
+}
+
+.customScrollbar::-webkit-scrollbar-thumb {
+  background: #c6d4df;
+  border-radius: 4px;
+}
+
+.customScrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a7c0cc;
+}
+
+.customScrollbar::-webkit-scrollbar-thumb:active {
+  background: #a7c0cc;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

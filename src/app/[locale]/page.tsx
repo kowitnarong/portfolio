@@ -89,7 +89,7 @@ export default function Home() {
         <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
           <ImageOverlay
             className="h-80 w-80"
-            src={Profile.src}
+            src="/files/images/castle-knight/4.webp"
             href="/work/game-development#castle-knight"
             alt="castle knight"
             textTitle={t('Home.game.castle-knight.title')}
@@ -105,7 +105,7 @@ export default function Home() {
           />
           <ImageOverlay
             className="h-80 w-80"
-            src={Profile.src}
+            src="/files/images/documents-master/8.webp"
             href="/work/game-development#documents-master"
             alt="documents master"
             textTitle={t('Home.game.documents-master.title')}
@@ -113,7 +113,7 @@ export default function Home() {
           />
           <ImageOverlay
             className="h-80 w-80"
-            src={Profile.src}
+            src="/files/images/dawn/4.webp"
             href="/work/game-development#dawn"
             alt="dawn"
             textTitle={t('Home.game.dawn.title')}
