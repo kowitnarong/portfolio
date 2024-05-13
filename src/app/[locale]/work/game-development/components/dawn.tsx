@@ -19,15 +19,15 @@ export const Dawn = (props: DawnProps) => {
   return (
     <div className="flex w-full max-w-[1024px] flex-col items-center justify-center py-6">
       <div id="#dawn" className="flex w-full flex-col items-center justify-center">
+        <div className="flex w-full flex-col justify-start p-2 lg:w-[90%] lg:px-10">
+          <span className="text-2xl font-bold">Dawn (2023)</span>
+          <span className="text-base text-[#595959] dark:text-[#B8B8B8]">
+            {t('Game.dawn.subtitle')}
+          </span>
+        </div>
+        <Slideshow hrefList={slideshowList} />
         <div className="flex h-auto w-full flex-col items-start justify-center gap-x-6 p-2 lg:flex-row lg:p-10">
           <div className="flex h-auto w-full flex-col lg:w-[45%]">
-            <span className="text-2xl font-bold">Dawn (2023)</span>
-            <span className="text-base text-[#595959] dark:text-[#B8B8B8]">
-              {t('Game.dawn.subtitle')}
-            </span>
-
-            <Slideshow hrefList={slideshowList} />
-
             <span className="text-xl font-bold">{t('Game.overview')}</span>
             <span className="text-base text-[#595959] dark:text-[#B8B8B8]">
               {t('Home.game.dawn.description')}

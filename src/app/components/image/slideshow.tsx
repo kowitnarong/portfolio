@@ -17,7 +17,7 @@ export const Slideshow = (props: SlideshowProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <div className="my-4 flex h-auto w-full max-w-[720px] flex-col items-center justify-center">
+    <div className="mt-4 flex h-auto w-full max-w-[720px] flex-col items-center justify-center">
       <div
         key={currentIndex}
         className={

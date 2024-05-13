@@ -24,13 +24,6 @@ export const DemonHunter = (props: DemonHunterProps) => {
             <Slideshow
               hrefList={[
                 {
-                  href: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4',
-                  type: 'video',
-                  thumbnail:
-                    'https://robertmarshall.dev/static/965c61c79da9aefaaf6ed51af84d9340/923ac/testing-images-in-react-with-jest.jpg',
-                  alt: 'castle-knight',
-                },
-                {
                   href: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPVB_jHALvaVy6fX4l_o4xOsA6Hj4KLx9kj8Kowg1xFw&s',
                   type: 'image',
                   thumbnail: '',
