@@ -30,6 +30,36 @@ export const metadata: Metadata = {
     'pwa',
     'next-pwa',
   ],
+  applicationName: 'Portfolio | Kowit Narongtuwapan',
+  referrer: 'no-referrer',
+  creator: 'Kowit Narongtuwapan',
+  openGraph: {
+    type: 'website',
+    siteName: 'Portfolio | Kowit Narongtuwapan',
+    url: process.env.NEXT_PUBLIC_SITE_URL || '',
+    title: 'Portfolio | Kowit Narongtuwapan',
+    description: 'Portfolio of Kowit Narongtuwapan',
+    images: [
+      {
+        url: process.env.NEXT_PUBLIC_SITE_URL + '/screenshots/wide-screenshot.png',
+        width: 1280,
+        height: 720,
+        alt: 'Portfolio | Kowit Narongtuwapan',
+      },
+    ],
+  },
+  appleWebApp: {
+    capable: true,
+    title: 'Portfolio | Kowit Narongtuwapan',
+    startupImage: [
+      {
+        url: process.env.NEXT_PUBLIC_SITE_URL + '/icons/icon-128x128.png',
+        media:
+          '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)',
+      },
+    ],
+    statusBarStyle: 'default',
+  },
   authors: [
     { name: 'Kowit Narongtuwapan' },
     {
