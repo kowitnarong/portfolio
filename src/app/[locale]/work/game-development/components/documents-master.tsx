@@ -1,7 +1,7 @@
 import { Slideshow, SlideshowProps } from '@/app/components/image/slideshow';
 import { Button, Link } from '@nextui-org/react';
 import { useTranslations } from 'next-intl';
-import DocumentsMasterJSON from './่json/documents-master.json';
+import DocumentsMasterJSON from './json/documents-master.json';
 
 type DocumentsMasterProps = {
   theme: string | undefined;

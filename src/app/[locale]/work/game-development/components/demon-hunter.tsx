@@ -1,6 +1,7 @@
-import { Slideshow } from '@/app/components/image/slideshow';
+import { Slideshow, SlideshowProps } from '@/app/components/image/slideshow';
 import { Button, Link } from '@nextui-org/react';
 import { useTranslations } from 'next-intl';
+import DemonHunterJSON from './json/demon-hunter.json';
 
 type DemonHunterProps = {
   theme: string | undefined;
@@ -8,42 +9,27 @@ type DemonHunterProps = {
 
 export const DemonHunter = (props: DemonHunterProps) => {
   const t = useTranslations();
+
+  const slideshowList: SlideshowProps['hrefList'] = DemonHunterJSON.map((item) => ({
+    ...item,
+    type: item.type === 'image' || item.type === 'video' ? item.type : 'image',
+  }));
+
   return (
     <div className="flex w-full max-w-[1024px] flex-col items-center justify-center py-6">
       <div
         id="#demon-hunter"
         className="flex w-full flex-col items-center justify-center"
       >
+        <div className="flex w-full flex-col justify-start p-2 lg:w-[90%] lg:px-10">
+          <span className="text-2xl font-bold">Demon Hunter (2022)</span>
+          <span className="text-base text-[#595959] dark:text-[#B8B8B8]">
+            {t('Game.demon-hunter.subtitle')}
+          </span>
+        </div>
+        <Slideshow hrefList={slideshowList} />
         <div className="flex h-auto w-full flex-col items-start justify-center gap-x-6 p-2 lg:flex-row lg:p-10">
           <div className="flex h-auto w-full flex-col lg:w-[45%]">
-            <span className="text-2xl font-bold">Demon Hunter (2022)</span>
-            <span className="text-base text-[#595959] dark:text-[#B8B8B8]">
-              {t('Game.demon-hunter.subtitle')}
-            </span>
-
-            <Slideshow
-              hrefList={[
-                {
-                  href: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPVB_jHALvaVy6fX4l_o4xOsA6Hj4KLx9kj8Kowg1xFw&s',
-                  type: 'image',
-                  thumbnail: '',
-                  alt: 'castle-knight',
-                },
-                {
-                  href: 'https://robertmarshall.dev/static/965c61c79da9aefaaf6ed51af84d9340/923ac/testing-images-in-react-with-jest.jpg',
-                  type: 'image',
-                  thumbnail: '',
-                  alt: 'castle-knight',
-                },
-                {
-                  href: 'https://robertmarshall.dev/static/965c61c79da9aefaaf6ed51af84d9340/923ac/testing-images-in-react-with-jest.jpg',
-                  type: 'image',
-                  thumbnail: '',
-                  alt: 'castle-knight',
-                },
-              ]}
-            />
-
             <span className="text-xl font-bold">{t('Game.overview')}</span>
             <span className="text-base text-[#595959] dark:text-[#B8B8B8]">
               {t('Home.game.demon-hunter.description')}

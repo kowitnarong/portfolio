@@ -33,6 +33,7 @@ export const Slideshow = (props: SlideshowProps) => {
             width={0}
             height={0}
             sizes="100vw"
+            style={{ objectFit: 'contain' }}
             className={`${styles.imageTopContainer}`}
           />
         ) : (

@@ -60,14 +60,16 @@
   object-fit: cover;
 }
 
-.image:hover {
+.hover {
   scale: 1.1;
   animation: zoomIn 0.5s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
-.image:not(:hover) {
+.noHover {
   scale: 1;
   animation: zoomOut 0.5s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadeUp {

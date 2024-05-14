@@ -2,7 +2,7 @@ import { Slideshow } from '@/app/components/image/slideshow';
 import { Button, Link } from '@nextui-org/react';
 import { useTranslations } from 'next-intl';
 import { SlideshowProps } from '@/app/components/image/slideshow';
-import DawnJSON from './่json/dawn.json';
+import DawnJSON from './json/dawn.json';
 
 type DawnProps = {
   theme: string | undefined;

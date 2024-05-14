@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './styles/image-overlay.module.css';
 import Image from 'next/image';
 import { useRouter } from '@/core/navigation/navigation';
@@ -18,6 +18,7 @@ type ImageOverlayProps = {
 
 export const ImageOverlay = (props: ImageOverlayProps) => {
   const { isMobile } = UseStoreGlobal(['isMobile']);
+  const [isHidden, setIsHidden] = useState(true);
   const router = useRouter();
   const [isHovered, setIsHovered] = useState(false);
 
@@ -30,7 +31,10 @@ export const ImageOverlay = (props: ImageOverlayProps) => {
         !isMobile && props.href !== undefined && router.push(props.href);
       }}
       onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseLeave={() => {
+        handleMouseLeave();
+        setIsHidden(false);
+      }}
       className={
         `${styles.container} ${props.className} ${props.href !== undefined ? 'cursor-pointer' : ''}` +
         ' shadow-md'
@@ -67,7 +71,7 @@ export const ImageOverlay = (props: ImageOverlayProps) => {
         alt={props.alt}
         fill
         priority
-        className={`${styles.image}`}
+        className={`${styles.image} ${isHidden ? (isHovered ? styles.hover : '') : isHovered ? styles.hover : styles.noHover}`}
       />
     </div>
   );

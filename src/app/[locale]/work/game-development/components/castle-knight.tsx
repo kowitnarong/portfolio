@@ -1,7 +1,7 @@
 import { Slideshow, SlideshowProps } from '@/app/components/image/slideshow';
 import { Button, Link } from '@nextui-org/react';
 import { useTranslations } from 'next-intl';
-import CastleKnightJSON from './่json/castle-knight.json';
+import CastleKnightJSON from './json/castle-knight.json';
 
 type CastleKnightProps = {
   theme: string | undefined;

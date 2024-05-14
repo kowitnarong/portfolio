@@ -79,11 +79,9 @@ export default function NavbarContainer() {
         <NavbarItem>
           <Dropdown>
             <DropdownTrigger>
-              <Button
+              <button
                 style={{ fontSize: 'min(max(0.75rem, 1.1vw), 1rem)' }}
-                disableRipple
-                className="-ml-1 -mr-5 mt-0.5 flex items-center gap-1 bg-transparent data-[hover=true]:bg-transparent"
-                variant="light"
+                className="-mr-2 mt-0.5 flex w-auto items-center gap-1 bg-transparent data-[hover=true]:bg-transparent"
               >
                 {pathname.includes('/work') ? (
                   <span
@@ -98,7 +96,7 @@ export default function NavbarContainer() {
                   t('Navbar.header.work.title')
                 )}
                 <RiArrowDropDownLine className="mt-0.5" />
-              </Button>
+              </button>
             </DropdownTrigger>
             <DropdownMenu
               aria-label="Work"

@@ -1,0 +1,44 @@
+[
+  {
+    "href": "https://firebasestorage.googleapis.com/v0/b/next-ddd-firebase.appspot.com/o/demon-hunter.mp4?alt=media&token=e78aa211-3383-47de-97a3-c0f21f357d01",
+    "type": "video",
+    "thumbnail": "/files/images/demon-hunter/1.webp",
+    "alt": "demon-hunter"
+  },
+  {
+    "href": "/files/images/demon-hunter/2.webp",
+    "type": "image",
+    "thumbnail": "",
+    "alt": "demon-hunter"
+  },
+  {
+    "href": "/files/images/demon-hunter/3.webp",
+    "type": "image",
+    "thumbnail": "",
+    "alt": "demon-hunter"
+  },
+  {
+    "href": "/files/images/demon-hunter/4.webp",
+    "type": "image",
+    "thumbnail": "",
+    "alt": "demon-hunter"
+  },
+  {
+    "href": "/files/images/demon-hunter/5.webp",
+    "type": "image",
+    "thumbnail": "",
+    "alt": "demon-hunter"
+  },
+  {
+    "href": "/files/images/demon-hunter/6.webp",
+    "type": "image",
+    "thumbnail": "",
+    "alt": "demon-hunter"
+  },
+  {
+    "href": "/files/images/demon-hunter/7.webp",
+    "type": "image",
+    "thumbnail": "",
+    "alt": "demon-hunter"
+  }
+]

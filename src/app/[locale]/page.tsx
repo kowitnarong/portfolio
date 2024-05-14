@@ -3,9 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { HelperInit } from '@/globals/helpers/helpers';
 import { useEffect, useState } from 'react';
-import ReactPlayer from 'react-player';
 import { ImageOverlay } from '../components/image/image-overlay';
-import Profile from '../assets/profile.webp';
 import Link from 'next/link';
 
 export default function Home() {
@@ -51,14 +49,7 @@ export default function Home() {
           </ul>
         </div>
       </div>
-      <div className="mt-10 aspect-video w-[85%] max-w-[760px]">
-        <ReactPlayer
-          controls={true}
-          width="100%"
-          height="100%"
-          url="https://youtu.be/b2Z8GNqkVa0"
-        />
-      </div>
+
       <div className="mb-5 mt-10 w-full items-center justify-center">
         <span className="flex w-full items-center justify-center text-xl">
           {t('Home.web.title')}
@@ -66,7 +57,7 @@ export default function Home() {
         <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
           <ImageOverlay
             className="h-80 w-80"
-            src={Profile.src}
+            src="/files/images/muteru/1.webp"
             href="/work/web-development#muteru"
             alt="muteru"
             textTitle={t('Home.web.muteru.title')}
@@ -74,7 +65,7 @@ export default function Home() {
           />
           <ImageOverlay
             className="h-80 w-80"
-            src={Profile.src}
+            src="/files/images/net-zero/2.webp"
             href="/work/web-development#net-zero"
             alt="net zero"
             textTitle={t('Home.web.net-zero.title')}
@@ -97,7 +88,7 @@ export default function Home() {
           />
           <ImageOverlay
             className="h-80 w-80"
-            src={Profile.src}
+            src="/files/images/demon-hunter/3.webp"
             href="/work/game-development#demon-hunter"
             alt="demon hunter"
             textTitle={t('Home.game.demon-hunter.title')}
