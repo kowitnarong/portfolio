@@ -49,7 +49,7 @@ export const DemonHunter = (props: DemonHunterProps) => {
             <span className="text-lg font-bold">
               {t('Game.tools')}:{' '}
               <span className="text-base font-normal text-[#595959] dark:text-[#B8B8B8]">
-                Unity C#, PHP, Mysql, A* Pathfinding, Git, Microsoft Teams
+                Unity C#, PHP, MySQL, A* Pathfinding, Git, Microsoft Teams
               </span>
             </span>
             <span className="text-lg font-bold">

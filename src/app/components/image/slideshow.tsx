@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import styles from './styles/slideshow.module.css';
 import { IoPlay } from 'react-icons/io5';
-import ReactPlayer from 'react-player';
+import ReactPlayer from 'react-player/youtube';
 
 export type SlideshowProps = {
   hrefList: {
@@ -27,14 +27,15 @@ export const Slideshow = (props: SlideshowProps) => {
       >
         {props.hrefList[currentIndex].type === 'image' ? (
           <Image
-            priority
+            priority={true}
             src={props.hrefList[currentIndex].href}
             alt={props.hrefList[currentIndex].alt}
             width={0}
             height={0}
             sizes="100vw"
             style={{ objectFit: 'contain' }}
-            className={`${styles.imageTopContainer}`}
+            className={`${styles.imageTopContainer}` + ' h-auto w-full select-none'}
+            blurDataURL={props.hrefList[currentIndex].href}
           />
         ) : (
           <ReactPlayer
@@ -57,18 +58,19 @@ export const Slideshow = (props: SlideshowProps) => {
               <div
                 className={
                   `${currentIndex === index ? 'border-2 border-[#006FEE] dark:border-[#EAB308]' : 'opacity-50'}` +
-                  ' flex aspect-video flex-none items-center justify-center bg-black'
+                  ' flex aspect-video flex-none select-none items-center justify-center bg-black'
                 }
                 key={index}
               >
                 <Image
-                  priority
-                  className="cursor-pointer"
+                  priority={currentIndex === index}
+                  className="h-auto w-[110px] cursor-pointer"
                   onClick={() => setCurrentIndex(index)}
-                  width={110}
-                  height={110}
+                  width="0"
+                  height="0"
                   src={href.href}
                   alt={href.alt}
+                  blurDataURL={href.href}
                 />
               </div>
             );
@@ -77,7 +79,7 @@ export const Slideshow = (props: SlideshowProps) => {
               <div
                 className={
                   `${currentIndex === index ? 'border-2 border-[#006FEE] dark:border-[#EAB308]' : 'opacity-50'}` +
-                  ' relative flex aspect-video flex-none items-center justify-center bg-black'
+                  ' relative flex aspect-video flex-none select-none items-center justify-center bg-black'
                 }
                 key={index}
               >
@@ -90,13 +92,14 @@ export const Slideshow = (props: SlideshowProps) => {
                   </div>
                 </div>
                 <Image
-                  priority
+                  priority={currentIndex === index}
                   onClick={() => setCurrentIndex(index)}
-                  className="cursor-pointer"
-                  width={110}
-                  height={110}
+                  className="h-auto w-[110px] cursor-pointer"
+                  width="0"
+                  height="0"
                   src={href.thumbnail}
                   alt={href.alt}
+                  blurDataURL={href.thumbnail}
                 />
               </div>
             );
