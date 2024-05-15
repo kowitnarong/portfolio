@@ -198,9 +198,13 @@
   },
   "Resume": {
     "title": "Resume",
+    "transcript": "Transcript",
+    "thai-version": "Thai Version",
+    "english-version": "English Version",
     "button": {
       "newTab": "Open in new tab",
-      "download": "Download"
+      "download": "Download",
+      "click": "Click here!"
     }
   },
   "About": {

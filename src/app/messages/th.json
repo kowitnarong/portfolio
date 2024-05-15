@@ -198,9 +198,13 @@
   },
   "Resume": {
     "title": "เรซูเม่",
+    "transcript": "ผลการเรียน",
+    "thai-version": "ฉบับภาษาไทย",
+    "english-version": "ฉบับภาษาอังกฤษ",
     "button": {
       "newTab": "เปิดในหน้าต่างใหม่",
-      "download": "ดาวน์โหลด"
+      "download": "ดาวน์โหลด",
+      "click": "คลิกที่นี่!"
     }
   },
   "About": {

@@ -17,6 +17,8 @@ export default function ResumePage() {
   const t = useTranslations();
   const { theme } = useTheme();
   const pdfURL = '/files/kowit-resume.pdf';
+  const pdfTranscriptThaiURL = '/files/transcript-th.pdf';
+  const pdfTranscriptEngURL = '/files/transcript-en.pdf';
 
   const [width, setWidth] = useState(0);
 
@@ -86,7 +88,7 @@ export default function ResumePage() {
           <Page width={width} pageNumber={1} />
         </Document>
       </div>
-      <div className="flex w-full flex-row items-center justify-center gap-x-5 p-6 pt-8">
+      <div className="flex w-full flex-col items-center justify-center gap-x-5 gap-y-4 p-6 pt-8 md:flex-row">
         <Button
           className="cursor-pointer"
           href={pdfURL}
@@ -107,6 +109,35 @@ export default function ResumePage() {
         >
           {t('Resume.button.download')}
         </Button>
+      </div>
+      <div className="mb-4 mt-8 text-4xl font-bold">{t('Resume.transcript')}</div>
+      <div className="flex w-full flex-col items-center justify-center gap-x-5 gap-y-4 p-6 pt-8 md:flex-row">
+        <div className="flex items-center justify-center gap-x-2">
+          <p>{t('Resume.thai-version')}:</p>
+          <Button
+            className="cursor-pointer"
+            href={pdfURL}
+            as={Link}
+            color={theme === 'light' ? 'default' : 'warning'}
+            aria-label="new tab"
+            isExternal
+            rel="noopener noreferrer"
+          >
+            {t('Resume.button.click')}
+          </Button>
+        </div>
+        <div className="flex items-center justify-center gap-x-2">
+          <p>{t('Resume.english-version')}:</p>
+          <Button
+            className="cursor-pointer"
+            as={Link}
+            color={theme === 'light' ? 'default' : 'warning'}
+            aria-label="download"
+            onPress={() => downloadFile(pdfURL, 'kowit-resume.pdf')}
+          >
+            {t('Resume.button.click')}
+          </Button>
+        </div>
       </div>
     </main>
   );
