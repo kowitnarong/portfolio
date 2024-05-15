@@ -116,10 +116,10 @@ export default function ResumePage() {
           <p>{t('Resume.thai-version')}:</p>
           <Button
             className="cursor-pointer"
-            href={pdfURL}
+            href={pdfTranscriptThaiURL}
             as={Link}
             color={theme === 'light' ? 'default' : 'warning'}
-            aria-label="new tab"
+            aria-label="download transcript thai"
             isExternal
             rel="noopener noreferrer"
           >
@@ -130,10 +130,12 @@ export default function ResumePage() {
           <p>{t('Resume.english-version')}:</p>
           <Button
             className="cursor-pointer"
+            href={pdfTranscriptEngURL}
             as={Link}
             color={theme === 'light' ? 'default' : 'warning'}
-            aria-label="download"
-            onPress={() => downloadFile(pdfURL, 'kowit-resume.pdf')}
+            aria-label="download transcript english"
+            isExternal
+            rel="noopener noreferrer"
           >
             {t('Resume.button.click')}
           </Button>
