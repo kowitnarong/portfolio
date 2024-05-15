@@ -70,8 +70,12 @@ export const ImageOverlay = (props: ImageOverlayProps) => {
         src={props.src}
         alt={props.alt}
         fill
+        draggable={false}
         priority
-        className={`${styles.image} ${isHidden ? (isHovered ? styles.hover : '') : isHovered ? styles.hover : styles.noHover}`}
+        className={
+          'select-none ' +
+          `${styles.image} ${isHidden ? (isHovered ? styles.hover : '') : isHovered ? styles.hover : styles.noHover}`
+        }
       />
     </div>
   );

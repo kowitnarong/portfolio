@@ -27,6 +27,7 @@ export const Slideshow = (props: SlideshowProps) => {
       >
         {props.hrefList[currentIndex].type === 'image' ? (
           <Image
+            draggable={false}
             priority={true}
             src={props.hrefList[currentIndex].href}
             alt={props.hrefList[currentIndex].alt}
@@ -63,6 +64,7 @@ export const Slideshow = (props: SlideshowProps) => {
                 key={index}
               >
                 <Image
+                  draggable={false}
                   priority={currentIndex === index}
                   className="h-auto w-[110px] cursor-pointer"
                   onClick={() => setCurrentIndex(index)}
@@ -92,6 +94,7 @@ export const Slideshow = (props: SlideshowProps) => {
                   </div>
                 </div>
                 <Image
+                  draggable={false}
                   priority={currentIndex === index}
                   onClick={() => setCurrentIndex(index)}
                   className="h-auto w-[110px] cursor-pointer"

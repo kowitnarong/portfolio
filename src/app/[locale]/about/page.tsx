@@ -37,8 +37,9 @@ export default function AboutPage() {
         {t('About.title.name')}
       </div>
       <div className="flex w-full max-w-[1280px] flex-col items-center justify-center lg:flex-row">
-        <div className="flex w-full max-w-[360px] justify-center px-4 lg:mr-6 lg:w-[40%] lg:max-w-[480px] lg:justify-end">
+        <div className="flex w-full max-w-[360px] select-none justify-center px-4 lg:mr-6 lg:w-[40%] lg:max-w-[480px] lg:justify-end">
           <Image
+            draggable={false}
             priority
             src={Profile.src}
             alt="profile"
