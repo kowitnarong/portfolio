@@ -7,7 +7,6 @@ import { HelperInit } from '@/globals/helpers/helpers';
 import Profile from '@/app/assets/profile.webp';
 import Link from 'next/link';
 import { SocialMedia } from '@/app/components/layout/social-media';
-import styles from './about.module.css';
 import { useEffect, useState } from 'react';
 
 export default function AboutPage() {
@@ -27,12 +26,7 @@ export default function AboutPage() {
   if (!isMounted) return null;
 
   return (
-    <main
-      className={
-        styles.fadeIn +
-        ' flex min-h-[90vh] flex-col items-center justify-start bg-gray-50 px-10 py-4 text-gray-900 dark:bg-gray-800 dark:text-gray-100 lg:px-24 lg:py-10'
-      }
-    >
+    <main className="fade-in flex min-h-[90vh] flex-col items-center justify-start bg-gray-50 px-10 py-4 text-gray-900 dark:bg-gray-800 dark:text-gray-100 lg:px-24 lg:py-10">
       <div className="mb-8 mt-4 text-4xl font-bold text-black dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
         {t('About.title.name')}
       </div>

@@ -8,8 +8,6 @@ import 'pdfjs-dist/build/pdf.worker.entry';
 import 'react-pdf/dist/Page/TextLayer.css';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 
-import styles from './resume.module.css';
-
 import { useTheme } from 'next-themes';
 import { Button, Link } from '@nextui-org/react';
 
@@ -70,12 +68,7 @@ export default function ResumePage() {
   if (!isMounted) return null;
 
   return (
-    <main
-      className={
-        styles.fadeIn +
-        ' flex min-h-[90vh] flex-col items-center justify-start scroll-smooth bg-gray-50 px-10 py-4 text-gray-900 dark:bg-gray-800 dark:text-gray-100 lg:px-24 lg:py-10'
-      }
-    >
+    <main className="fade-in flex min-h-[90vh] flex-col items-center justify-start scroll-smooth bg-gray-50 px-10 py-4 text-gray-900 dark:bg-gray-800 dark:text-gray-100 lg:px-24 lg:py-10">
       <div className="mb-8 mt-4 text-4xl font-bold">{t('Resume.title')}</div>
       <div
         id="pdf-container"

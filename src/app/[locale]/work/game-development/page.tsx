@@ -4,8 +4,6 @@ import { useTranslations } from 'next-intl';
 import { HelperInit } from '@/globals/helpers/helpers';
 import { useEffect, useState } from 'react';
 
-import styles from './game-development.module.css';
-
 import { useTheme } from 'next-themes';
 import { CastleKnight } from './components/castle-knight';
 import { DocumentsMaster } from './components/documents-master';
@@ -30,12 +28,7 @@ export default function GameDevelopmentPage() {
   if (!isMounted) return null;
 
   return (
-    <main
-      className={
-        styles.fadeIn +
-        ' flex min-h-[90vh] flex-col items-center justify-start scroll-smooth bg-gray-50 px-10 py-4 text-gray-900 dark:bg-gray-800 dark:text-gray-100 lg:px-24 lg:py-10'
-      }
-    >
+    <main className="fade-in flex min-h-[90vh] flex-col items-center justify-start scroll-smooth bg-gray-50 px-10 py-4 text-gray-900 dark:bg-gray-800 dark:text-gray-100 lg:px-24 lg:py-10">
       <CastleKnight theme={theme} />
       <DemonHunter theme={theme} />
       <DocumentsMaster theme={theme} />

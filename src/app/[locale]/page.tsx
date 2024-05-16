@@ -23,7 +23,7 @@ export default function Home() {
   if (!isMounted) return null;
 
   return (
-    <main className="flex min-h-[90vh] flex-col items-center justify-start bg-gray-50 px-10 py-4 dark:bg-gray-800 dark:text-gray-100 lg:px-24 lg:pb-10 lg:pt-6">
+    <main className="fade-in flex min-h-[90vh] flex-col items-center justify-start bg-gray-50 px-10 py-4 dark:bg-gray-800 dark:text-gray-100 lg:px-24 lg:pb-10 lg:pt-6">
       <div className="mt-10 flex w-full max-w-[1024px] flex-col items-start font-bold">
         <span className="text-xl text-gray-500 dark:text-gray-400 dark:drop-shadow-[0_0_0.3rem_#00000070]">
           {t('Home.title.role')}
