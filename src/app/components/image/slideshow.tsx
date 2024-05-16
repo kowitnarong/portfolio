@@ -51,7 +51,7 @@ export const Slideshow = (props: SlideshowProps) => {
       <div
         className={
           `${styles.customScrollbar}` +
-          ' flex h-auto w-full flex-row items-center justify-start gap-x-2 overflow-x-scroll py-2 shadow-lg'
+          ' flex h-auto w-full flex-row items-center justify-start gap-x-2 overflow-x-scroll py-2'
         }
       >
         {props.hrefList.map((href, index) => {

@@ -67,6 +67,7 @@ export const ImageOverlay = (props: ImageOverlayProps) => {
         </div>
       )}
       <Image
+        placeholder="blur"
         src={props.src}
         alt={props.alt}
         blurDataURL={props.src}
