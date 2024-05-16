@@ -34,7 +34,9 @@ export default function AboutPage() {
         <div className="flex w-full max-w-[360px] select-none justify-center px-4 lg:mr-6 lg:w-[40%] lg:max-w-[480px] lg:justify-end">
           <Image
             draggable={false}
-            priority
+            priority={true}
+            blurDataURL={Profile.src}
+            placeholder="blur"
             src={Profile.src}
             alt="profile"
             width={360}

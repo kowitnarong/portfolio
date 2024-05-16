@@ -31,6 +31,7 @@ export const ScrollToTop = () => {
 
   return (
     <button
+      type="button"
       aria-label="Scroll To Top"
       className={
         `${styles.button} ${styles.scrollToTopButton} ${isVisible ? styles.visible : ''}` +

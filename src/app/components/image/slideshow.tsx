@@ -33,10 +33,11 @@ export const Slideshow = (props: SlideshowProps) => {
             alt={props.hrefList[currentIndex].alt}
             width={0}
             height={0}
-            sizes="100vw"
+            sizes="100%"
             style={{ objectFit: 'contain' }}
             className={`${styles.imageTopContainer}` + ' h-auto w-full select-none'}
             blurDataURL={props.hrefList[currentIndex].href}
+            placeholder="blur"
           />
         ) : (
           <ReactPlayer
@@ -65,14 +66,16 @@ export const Slideshow = (props: SlideshowProps) => {
               >
                 <Image
                   draggable={false}
-                  priority={currentIndex === index}
+                  priority={true}
                   className="h-auto w-[110px] cursor-pointer"
                   onClick={() => setCurrentIndex(index)}
-                  width="0"
-                  height="0"
+                  width={0}
+                  height={0}
+                  sizes="100%"
                   src={href.href}
                   alt={href.alt}
                   blurDataURL={href.href}
+                  placeholder="blur"
                 />
               </div>
             );
@@ -95,14 +98,16 @@ export const Slideshow = (props: SlideshowProps) => {
                 </div>
                 <Image
                   draggable={false}
-                  priority={currentIndex === index}
+                  priority={true}
                   onClick={() => setCurrentIndex(index)}
                   className="h-auto w-[110px] cursor-pointer"
-                  width="0"
-                  height="0"
+                  width={0}
+                  height={0}
+                  sizes="100%"
                   src={href.thumbnail}
                   alt={href.alt}
                   blurDataURL={href.thumbnail}
+                  placeholder="blur"
                 />
               </div>
             );

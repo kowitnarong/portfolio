@@ -68,8 +68,11 @@ export const metadata: Metadata = {
     },
   ],
   icons: [
-    { rel: 'apple-touch-icon', url: 'icons/icon-128x128.png' },
-    { rel: 'icon', url: 'icons/icon-128x128.png' },
+    {
+      rel: 'apple-touch-icon',
+      url: process.env.NEXT_PUBLIC_SITE_URL + '/icons/icon-128x128.png',
+    },
+    { rel: 'icon', url: process.env.NEXT_PUBLIC_SITE_URL + '/icons/icon-128x128.png' },
   ],
   alternates: {
     languages: {

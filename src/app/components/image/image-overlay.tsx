@@ -69,9 +69,11 @@ export const ImageOverlay = (props: ImageOverlayProps) => {
       <Image
         src={props.src}
         alt={props.alt}
-        fill
+        blurDataURL={props.src}
+        fill={true}
+        sizes="100%"
         draggable={false}
-        priority
+        priority={true}
         className={
           'select-none ' +
           `${styles.image} ${isHidden ? (isHovered ? styles.hover : '') : isHovered ? styles.hover : styles.noHover}`
