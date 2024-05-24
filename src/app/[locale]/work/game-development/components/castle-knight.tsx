@@ -31,7 +31,7 @@ export const CastleKnight = (props: CastleKnightProps) => {
         <div className="flex h-auto w-full flex-col items-start justify-center gap-x-6 p-2 lg:flex-row lg:p-10">
           <div className="flex h-auto w-full flex-col lg:w-[45%]">
             <span className="text-xl font-bold"> {t('Game.overview')}</span>
-            <span className="text-base text-[#595959] dark:text-[#B8B8B8]">
+            <span className="indent-8 text-base text-[#595959] dark:text-[#B8B8B8]">
               {t('Home.game.castle-knight.description')}
             </span>
             <span className="mt-2 text-lg font-bold">
@@ -58,6 +58,7 @@ export const CastleKnight = (props: CastleKnightProps) => {
                 4 (1 Programer, 2 Artists, 1 Game Designer)
               </span>
             </span>
+
             <span className="mt-6 hidden items-center text-lg font-bold lg:flex">
               Git Repository:
               <span className="ml-2 text-base font-normal text-[#595959] dark:text-[#B8B8B8]">

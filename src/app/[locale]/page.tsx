@@ -24,14 +24,14 @@ export default function Home() {
 
   return (
     <main className="fade-in flex min-h-[90vh] flex-col items-center justify-start bg-gray-50 px-10 py-4 dark:bg-gray-800 dark:text-gray-100 lg:px-24 lg:pb-10 lg:pt-6">
-      <div className="mt-10 flex w-full max-w-[1024px] flex-col items-start font-bold">
+      <div className="mt-10 flex w-full max-w-[1024px] flex-col items-start font-bold md:pr-12">
         <span className="text-xl text-gray-500 dark:text-gray-400 dark:drop-shadow-[0_0_0.3rem_#00000070]">
           {t('Home.title.role')}
         </span>
         <span className="mt-1 text-3xl text-black dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
           {t('Home.title.name')}
         </span>
-        <div className="mt-4 text-gray-500 dark:text-gray-400">
+        <div className="mt-4 indent-8 text-gray-500 dark:text-gray-400">
           {t('Home.title.description')}
           <br /> <br />
           {t('About.title.bullet2')}{' '}
@@ -70,6 +70,14 @@ export default function Home() {
             alt="net zero"
             textTitle={t('Home.web.net-zero.title')}
             textDescription={t('Home.web.net-zero.description')}
+          />
+          <ImageOverlay
+            className="h-80 w-80"
+            src="/files/images/portfolio/1.webp"
+            href="/work/web-development#portfolio"
+            alt="net zero"
+            textTitle={t('Home.web.portfolio.title')}
+            textDescription={t('Home.web.portfolio.description')}
           />
         </div>
       </div>

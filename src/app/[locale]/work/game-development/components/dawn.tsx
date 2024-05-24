@@ -29,7 +29,7 @@ export const Dawn = (props: DawnProps) => {
         <div className="flex h-auto w-full flex-col items-start justify-center gap-x-6 p-2 lg:flex-row lg:p-10">
           <div className="flex h-auto w-full flex-col lg:w-[45%]">
             <span className="text-xl font-bold">{t('Game.overview')}</span>
-            <span className="text-base text-[#595959] dark:text-[#B8B8B8]">
+            <span className="indent-8 text-base text-[#595959] dark:text-[#B8B8B8]">
               {t('Home.game.dawn.description')}
             </span>
             <span className="mt-2 text-lg font-bold">

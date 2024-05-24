@@ -3,10 +3,10 @@
     "title": {
       "role": "Web & Game Developer",
       "name": "Kowit Narongtuwapan",
-      "description": "Get to learn about game development specifically. I can use Unity and Unreal Engine to create games well. Also, I can work on web development.",
-      "bullet1": "Developed 3 Unity and 1 Unreal game project at Chiang Mai University.",
-      "bullet2": "I Can use fundamental Maya, Adobe XD and Figma.",
-      "bullet3": "I interned in web development for 1 year (React.js, JavaScript, Typescript, Firebase)."
+      "description": "Graduated from Chiang Mai University with first-class honors, studied game development. Proficient in using Unity, Unreal Engine for game creation, and has experience in web development.",
+      "bullet1": "Developed 3 Unity game projects and 1 Unreal project at Chiang Mai University.",
+      "bullet2": "Has teamwork skills, basic usage of Maya, Adobe XD, and Figma.",
+      "bullet3": "Has more than 1 year of experience in both front-end and back-end web development (Next.js, React, JavaScript, Typescript, PHP, REST API, Express.js, MySQL, Firebase)"
     },
     "web": {
       "title": "Web Development Projects",
@@ -17,6 +17,10 @@
       "net-zero": {
         "title": "Net-Zero (2024)",
         "description": "Net Zero is a web application that displays carbon usage data at Chiang Mai University. The data is categorized by faculty and location within the university. The website features a dashboard and 3D map visualization."
+      },
+      "portfolio": {
+        "title": "Portfolio (2024)",
+        "description": "A web application for showcasing work, developed with Next.js to support increased SEO. It allows for language and theme changes as desired."
       }
     },
     "game": {
@@ -103,6 +107,9 @@
         "bullet4": "Created Firebase APIs for sending data to the frontend.",
         "bullet5": "Developed a system for sending emails to users in case of abnormal data readings."
       }
+    },
+    "portfolio": {
+      "subtitle": "Web Application for showcasing portfolio"
     }
   },
   "Game": {

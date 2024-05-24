@@ -22,7 +22,7 @@ export const Slideshow = (props: SlideshowProps) => {
         key={currentIndex}
         className={
           `${styles.fadeIn}` +
-          ' flex aspect-video h-auto w-full max-w-[720px] items-center justify-center bg-black'
+          ' flex aspect-video h-auto w-full max-w-[720px] select-none items-center justify-center rounded-lg bg-gray-500 p-4 dark:bg-gray-900'
         }
       >
         {props.hrefList[currentIndex].type === 'image' ? (
@@ -35,7 +35,9 @@ export const Slideshow = (props: SlideshowProps) => {
             height={0}
             sizes="100%"
             style={{ objectFit: 'contain' }}
-            className={`${styles.imageTopContainer}` + ' h-auto w-full select-none'}
+            className={
+              `${styles.imageTopContainer}` + ' h-auto w-full select-none rounded-md'
+            }
             blurDataURL={props.hrefList[currentIndex].href}
             placeholder="blur"
           />
