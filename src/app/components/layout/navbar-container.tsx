@@ -11,7 +11,6 @@ import {
   NavbarItem,
   Dropdown,
   DropdownTrigger,
-  Button,
   DropdownMenu,
   DropdownItem,
 } from '@nextui-org/react';
@@ -28,18 +27,41 @@ import { Accordion } from './accordion';
 
 export default function NavbarContainer() {
   const { menuUIIsShow } = UseStoreGlobal(['menuUIIsShow']);
-
   const t = useTranslations();
   const pathname = usePathname();
   const router = useRouter();
   const { theme } = useTheme();
-
   const [mounted, setMounted] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => setMounted(true), []);
 
   if (!mounted || !menuUIIsShow.isShowHeader) return null;
+
+  function renderHeader(headerText: string | any, navigationPathname: string) {
+    return (
+      <Header
+        headerText={headerText}
+        navigationPathname={navigationPathname}
+        pathname={pathname}
+        theme={theme}
+        router={router}
+      />
+    );
+  }
+
+  function renderMobileHeader(headerText: string, href: string) {
+    return (
+      <HeaderMobile
+        href={href}
+        text={headerText}
+        pathname={pathname}
+        theme={theme}
+        router={router}
+        setIsMenuOpen={(isMenuOpen) => setIsMenuOpen(isMenuOpen)}
+      />
+    );
+  }
 
   return (
     <Navbar
@@ -50,32 +72,20 @@ export default function NavbarContainer() {
       className="bg-white dark:bg-slate-950"
     >
       <NavbarContent className="sm:hidden" justify="start">
-        <li className="flex h-full w-full items-center justify-start">
-          <NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} />
-        </li>
+        <NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} />
       </NavbarContent>
 
       <NavbarContent className="w-full sm:hidden" justify="center">
-        <li className="ml-2 flex h-full w-full items-center justify-start font-bold text-black dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
+        <li className="ml-2 font-bold text-black dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
           Portfolio
         </li>
       </NavbarContent>
 
       <NavbarContent className="hidden items-center gap-8 sm:flex" justify="center">
-        <li className="flex items-center justify-start border-r-2 border-black pr-8 dark:border-white">
-          <p className="ml-2 font-bold text-black dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
-            Portfolio
-          </p>
+        <li className="flex items-center justify-start border-r-2 border-black pr-8 font-bold dark:border-white">
+          Portfolio
         </li>
-        <NavbarItem>
-          <Header
-            headerText={t('Navbar.header.home')}
-            navigationPathname="/"
-            pathname={pathname}
-            theme={theme}
-            router={router}
-          />
-        </NavbarItem>
+        <NavbarItem>{renderHeader(t('Navbar.header.home'), '/')}</NavbarItem>
         <NavbarItem>
           <Dropdown>
             <DropdownTrigger>
@@ -113,10 +123,12 @@ export default function NavbarContainer() {
                   router.push('/work/web-development');
                 }}
               >
-                <div className="flex w-full items-center justify-between">
-                  <span>{t('Navbar.header.work.web')}</span>
-                  <span className="pb-0.5">→</span>
-                </div>
+                <li>
+                  <div className="flex w-full items-center justify-between">
+                    <span>{t('Navbar.header.work.web')}</span>
+                    <span className="pb-0.5">→</span>
+                  </div>
+                </li>
               </DropdownItem>
               <DropdownItem
                 aria-label="Game Development"
@@ -126,32 +138,18 @@ export default function NavbarContainer() {
                   router.push('/work/game-development');
                 }}
               >
-                <div className="flex w-full items-center justify-between">
-                  <span>{t('Navbar.header.work.game')}</span>
-                  <span className="pb-0.5">→</span>
-                </div>
+                <li>
+                  <div className="flex w-full items-center justify-between">
+                    <span>{t('Navbar.header.work.game')}</span>
+                    <span className="pb-0.5">→</span>
+                  </div>
+                </li>
               </DropdownItem>
             </DropdownMenu>
           </Dropdown>
         </NavbarItem>
-        <NavbarItem>
-          <Header
-            headerText={t('Navbar.header.resume')}
-            navigationPathname="/resume"
-            pathname={pathname}
-            theme={theme}
-            router={router}
-          />
-        </NavbarItem>
-        <NavbarItem>
-          <Header
-            headerText={t('Navbar.header.about')}
-            navigationPathname="/about"
-            pathname={pathname}
-            theme={theme}
-            router={router}
-          />
-        </NavbarItem>
+        <NavbarItem>{renderHeader(t('Navbar.header.resume'), '/resume')}</NavbarItem>
+        <NavbarItem>{renderHeader(t('Navbar.header.about'), '/about')}</NavbarItem>
       </NavbarContent>
 
       <NavbarContent justify="end">
@@ -167,14 +165,7 @@ export default function NavbarContainer() {
 
       <NavbarMenu className="dark:bg-slate-900">
         <NavbarMenuItem>
-          <HeaderMobile
-            href="/"
-            text={t('Navbar.header.home')}
-            pathname={pathname}
-            theme={theme}
-            router={router}
-            setIsMenuOpen={(isMenuOpen) => setIsMenuOpen(isMenuOpen)}
-          />
+          {renderMobileHeader(t('Navbar.header.home'), '/')}
         </NavbarMenuItem>
         <NavbarMenuItem>
           <Accordion
@@ -187,48 +178,26 @@ export default function NavbarContainer() {
             content={
               <ul className="my-1 ml-4 flex w-full flex-col items-start justify-center gap-y-1">
                 <li>
-                  <HeaderMobile
-                    href="/work/web-development"
-                    text={t('Navbar.header.work.web')}
-                    pathname={pathname}
-                    theme={theme}
-                    router={router}
-                    setIsMenuOpen={(isMenuOpen) => setIsMenuOpen(isMenuOpen)}
-                  />
+                  {renderMobileHeader(
+                    t('Navbar.header.work.game'),
+                    '/work/web-development',
+                  )}
                 </li>
                 <li>
-                  <HeaderMobile
-                    href="/work/game-development"
-                    text={t('Navbar.header.work.game')}
-                    pathname={pathname}
-                    theme={theme}
-                    router={router}
-                    setIsMenuOpen={(isMenuOpen) => setIsMenuOpen(isMenuOpen)}
-                  />
+                  {renderMobileHeader(
+                    t('Navbar.header.work.web'),
+                    '/work/game-development',
+                  )}
                 </li>
               </ul>
             }
           />
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <HeaderMobile
-            href="/resume"
-            text={t('Navbar.header.resume')}
-            pathname={pathname}
-            theme={theme}
-            router={router}
-            setIsMenuOpen={(isMenuOpen) => setIsMenuOpen(isMenuOpen)}
-          />
+          {renderMobileHeader(t('Navbar.header.resume'), '/resume')}
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <HeaderMobile
-            href="/about"
-            text={t('Navbar.header.about')}
-            pathname={pathname}
-            theme={theme}
-            router={router}
-            setIsMenuOpen={(isMenuOpen) => setIsMenuOpen(isMenuOpen)}
-          />
+          {renderMobileHeader(t('Navbar.header.about'), '/about')}
         </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>

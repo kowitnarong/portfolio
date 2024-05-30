@@ -22,6 +22,61 @@ export default function Home() {
 
   if (!isMounted) return null;
 
+  const webProjects = [
+    {
+      title: t('Home.web.muteru.title'),
+      src: '/files/images/muteru/1.webp',
+      description: t('Home.web.muteru.description'),
+      href: '/work/web-development#muteru',
+      alt: 'muteru',
+    },
+    {
+      title: t('Home.web.net-zero.title'),
+      src: '/files/images/net-zero/2.webp',
+      description: t('Home.web.net-zero.description'),
+      href: '/work/web-development#net-zero',
+      alt: 'net zero',
+    },
+    {
+      title: t('Home.web.portfolio.title'),
+      src: '/files/images/portfolio/1.webp',
+      description: t('Home.web.portfolio.description'),
+      href: '/work/web-development#portfolio',
+      alt: 'portfolio',
+    },
+  ];
+
+  const gameProjects = [
+    {
+      title: t('Home.game.castle-knight.title'),
+      src: '/files/images/castle-knight/4.webp',
+      description: t('Home.game.castle-knight.description'),
+      href: '/work/game-development#castle-knight',
+      alt: 'castle knight',
+    },
+    {
+      title: t('Home.game.demon-hunter.title'),
+      src: '/files/images/demon-hunter/3.webp',
+      description: t('Home.game.demon-hunter.description'),
+      href: '/work/game-development#demon-hunter',
+      alt: 'demon hunter',
+    },
+    {
+      title: t('Home.game.documents-master.title'),
+      src: '/files/images/documents-master/8.webp',
+      description: t('Home.game.documents-master.description'),
+      href: '/work/game-development#documents-master',
+      alt: 'documents master',
+    },
+    {
+      title: t('Home.game.dawn.title'),
+      src: '/files/images/dawn/4.webp',
+      description: t('Home.game.dawn.description'),
+      href: '/work/game-development#dawn',
+      alt: 'dawn',
+    },
+  ];
+
   return (
     <main className="fade-in flex min-h-[90vh] flex-col items-center justify-start bg-gray-50 px-10 py-4 dark:bg-gray-800 dark:text-gray-100 lg:px-24 lg:pb-10 lg:pt-6">
       <div className="mt-10 flex w-full max-w-[1024px] flex-col items-start font-bold md:pr-12">
@@ -33,7 +88,8 @@ export default function Home() {
         </span>
         <div className="mt-4 indent-8 text-gray-500 dark:text-gray-400">
           {t('Home.title.description')}
-          <br /> <br />
+          <br />
+          <br />
           {t('About.title.bullet2')}{' '}
           <Link
             href="mailto:kowit.narongtuwapan@hotmail.com"
@@ -55,30 +111,17 @@ export default function Home() {
           {t('Home.web.title')}
         </span>
         <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
-          <ImageOverlay
-            className="h-80 w-80"
-            src="/files/images/muteru/1.webp"
-            href="/work/web-development#muteru"
-            alt="muteru"
-            textTitle={t('Home.web.muteru.title')}
-            textDescription={t('Home.web.muteru.description')}
-          />
-          <ImageOverlay
-            className="h-80 w-80"
-            src="/files/images/net-zero/2.webp"
-            href="/work/web-development#net-zero"
-            alt="net zero"
-            textTitle={t('Home.web.net-zero.title')}
-            textDescription={t('Home.web.net-zero.description')}
-          />
-          <ImageOverlay
-            className="h-80 w-80"
-            src="/files/images/portfolio/1.webp"
-            href="/work/web-development#portfolio"
-            alt="net zero"
-            textTitle={t('Home.web.portfolio.title')}
-            textDescription={t('Home.web.portfolio.description')}
-          />
+          {webProjects.map((project) => (
+            <ImageOverlay
+              key={project.title}
+              className="h-80 w-80"
+              src={project.src}
+              href={project.href}
+              alt={project.alt}
+              textTitle={project.title}
+              textDescription={project.description}
+            />
+          ))}
         </div>
       </div>
       <div className="mb-5 mt-10 w-full items-center justify-center">
@@ -86,38 +129,17 @@ export default function Home() {
           {t('Home.game.title')}
         </span>
         <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
-          <ImageOverlay
-            className="h-80 w-80"
-            src="/files/images/castle-knight/4.webp"
-            href="/work/game-development#castle-knight"
-            alt="castle knight"
-            textTitle={t('Home.game.castle-knight.title')}
-            textDescription={t('Home.game.castle-knight.description')}
-          />
-          <ImageOverlay
-            className="h-80 w-80"
-            src="/files/images/demon-hunter/3.webp"
-            href="/work/game-development#demon-hunter"
-            alt="demon hunter"
-            textTitle={t('Home.game.demon-hunter.title')}
-            textDescription={t('Home.game.demon-hunter.description')}
-          />
-          <ImageOverlay
-            className="h-80 w-80"
-            src="/files/images/documents-master/8.webp"
-            href="/work/game-development#documents-master"
-            alt="documents master"
-            textTitle={t('Home.game.documents-master.title')}
-            textDescription={t('Home.game.documents-master.description')}
-          />
-          <ImageOverlay
-            className="h-80 w-80"
-            src="/files/images/dawn/4.webp"
-            href="/work/game-development#dawn"
-            alt="dawn"
-            textTitle={t('Home.game.dawn.title')}
-            textDescription={t('Home.game.dawn.description')}
-          />
+          {gameProjects.map((project) => (
+            <ImageOverlay
+              key={project.title}
+              className="h-80 w-80"
+              src={project.src}
+              href={project.href}
+              alt={project.alt}
+              textTitle={project.title}
+              textDescription={project.description}
+            />
+          ))}
         </div>
       </div>
     </main>
