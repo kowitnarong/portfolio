@@ -1,0 +1,47 @@
+{
+  "Home": {
+    "title": {
+      "role": "Web & Game Developer",
+      "name": "Kowit Narongtuwapan",
+      "description": "Graduated from Chiang Mai University with first-class honors, studied game development. Proficient in using Unity, Unreal Engine for game creation, and has experience in web development.",
+      "email": "You can contact me at",
+      "bullet1": "Developed 3 Unity game projects and 1 Unreal project at Chiang Mai University.",
+      "bullet2": "Has teamwork skills, basic usage of Maya, Adobe XD, and Figma.",
+      "bullet3": "Has more than 1 year of experience in both front-end and back-end web development (Next.js, React, JavaScript, Typescript, PHP, REST API, Express.js, MySQL, Firebase)"
+    },
+    "web": {
+      "title": "Web Development Projects",
+      "muteru": {
+        "title": "Muteru (2023)",
+        "description": "Muteru is an application for travelers interested in fortune-telling and spirituality through travel routes, enhancing love and faith. No matter the route, Muteru will help boost your luck for success in your career, finances, and personal life."
+      },
+      "net-zero": {
+        "title": "Net-Zero (2024)",
+        "description": "Net Zero is a web application that displays carbon usage data at Chiang Mai University. The data is categorized by faculty and location within the university. The website features a dashboard and 3D map visualization."
+      },
+      "portfolio": {
+        "title": "Portfolio (2024)",
+        "description": "A web application for showcasing work, developed with Next.js to support increased SEO. It allows for language and theme changes as desired."
+      }
+    },
+    "game": {
+      "title": "Game Development Projects",
+      "castle-knight": {
+        "title": "Castle Knight (2021)",
+        "description": "Castle Knight is a 2D side-scroller adventure game. The main gameplay involves fighting enemies within the level, with players only able to attack and defend. Players must use their skills to defeat enemies with varying abilities."
+      },
+      "demon-hunter": {
+        "title": "Demon Hunter (2022)",
+        "description": "Demon Hunter is a 2D top-down game where players must defeat monsters that approach them. Players can control their character in four directions and use a gun as their weapon. Items dropped by monsters can be used to enhance the player's attack power. Players must survive until the end of the time limit to win."
+      },
+      "documents-master": {
+        "title": "Documents Master (2022)",
+        "description": "Documents Master is a 3D top-down game that simulates document management at Chiang Mai University. The gameplay is inspired by the game Overcooked, where players must complete randomly assigned tasks within a time limit."
+      },
+      "dawn": {
+        "title": "Dawn (2023)",
+        "description": "Dawn is a 2-player online 3D game where players must work together to guide a baby bird back to its nest. This game requires teamwork and communication to progress through the levels. The baby bird can change its element to adapt to the game's environment."
+      }
+    }
+  }
+}

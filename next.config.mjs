@@ -1,7 +1,4 @@
-import withNextIntl from 'next-intl/plugin';
 import withPWA from 'next-pwa';
-
-const nextIntlConfig = withNextIntl();
 
 const PWA = withPWA({
   dest: 'public',
@@ -23,4 +20,4 @@ const nextConfig = {
   swcMinify: true,
 };
 
-export default nextIntlConfig(PWA(nextConfig));
+export default PWA(nextConfig);

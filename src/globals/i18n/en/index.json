@@ -1,0 +1,14 @@
+{
+  "Navbar": {
+    "header": {
+      "home": "Home",
+      "work": {
+        "title": "Work",
+        "web": "Web Development",
+        "game": "Game Development"
+      },
+      "resume": "Resume",
+      "about": "About"
+    }
+  }
+}

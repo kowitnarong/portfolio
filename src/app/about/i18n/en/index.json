@@ -1,0 +1,37 @@
+{
+  "About": {
+    "title": {
+      "name": "About Me",
+      "sub1": "Hi, my name is Kowit Narongtuwapan 👋.",
+      "sub2": "I am a Web & Game Developer.",
+      "bullet1": "I'm based in Chiang Mai, Thailand.",
+      "bullet2": "You can contact me at",
+      "general-skill": "General Skills",
+      "web-skill": "Web Developer Skills",
+      "game-skill": "Game Developer Skills"
+    },
+    "soft skill": {
+      "language": {
+        "thai": {
+          "title": "Thai",
+          "description": "Native Language"
+        },
+        "english": {
+          "title": "English",
+          "description1": "Proficient in understanding written and spoken English",
+          "description2": "Conversational level of English, able to communicate effectively in most situations."
+        }
+      },
+      "bullet1": "Demonstrated leadership skills through experience as a group leader.",
+      "bullet2": "Highly responsible and eager to learn new things."
+    },
+    "skill": {
+      "language": "Languages",
+      "framework": "Frameworks",
+      "library": "Library",
+      "database": "Database",
+      "tool": "Tools",
+      "multiplayer": "Multiplayer"
+    }
+  }
+}

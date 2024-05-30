@@ -1,0 +1,62 @@
+{
+  "Web": {
+    "overview": "Overview",
+    "role": "Role",
+    "framework": "Framework",
+    "library": "Library",
+    "teamSize": "Team Size",
+    "respon": "Responsible work",
+    "goto": "Go to website",
+    "button": {
+      "click": "Click here!"
+    },
+    "muteru": {
+      "subtitle": "Web Application for Tourism",
+      "description": "Muteru is an application for travelers interested in fortune-telling and spirituality through travel routes, enhancing love and faith. No matter the route, Muteru will help boost your luck for success in your career, finances, and personal life.",
+      "frontend": {
+        "bullet1": "Developed the website's user interface based on Figma designs.",
+        "bullet2": "Used Three.js to create a 3D game on the website.",
+        "bullet3": "Used Phaser.js to create a 2D game on the website.",
+        "bullet4": "Implemented various Firebase configurations.",
+        "bullet5": "Created a system for language and font switching.",
+        "bullet6": "Developed a Backoffice dashboard for Staff and Admin."
+      },
+      "backend": {
+        "bullet1": "Created a database on Firebase.",
+        "bullet2": "Designed a relational database structure.",
+        "bullet3": "Designed data storage to support scalability and user activity tracking.",
+        "bullet4": "Created Firebase APIs for sending data to the frontend.",
+        "bullet5": "Developed an authentication system for third-party logins.",
+        "bullet6": "Managed API calls to other project applications.",
+        "bullet7": "Created a token system for rewarding users."
+      },
+      "other": {
+        "title": "Other",
+        "bullet1": "Presented and participated in meetings with other teams to discuss API development.",
+        "bullet2": "Conducted user testing to identify and resolve issues."
+      }
+    },
+    "net-zero": {
+      "subtitle": " Web Application for Carbon Footprint Visualization",
+      "description": "Net Zero is a web application that displays carbon usage data at Chiang Mai University. The data is categorized by faculty and location within the university. The website features a dashboard and 3D map visualization.",
+      "frontend": {
+        "bullet1": "Developed the website's user interface based on Figma designs.",
+        "bullet2": "Created website menu windows.",
+        "bullet3": "Rearranged data from JSON files for presentation.",
+        "bullet4": "Created a system for language and font switching.",
+        "bullet5": "Developed a Backoffice dashboard for Admin."
+      },
+      "backend": {
+        "bullet1": "Created a database on Firebase.",
+        "bullet2": "Designed a relational database structure.",
+        "bullet3": "Used Firebase Cloud Functions and Realtime to retrieve data from other databases.",
+        "bullet4": "Created Firebase APIs for sending data to the frontend.",
+        "bullet5": "Developed a system for sending emails to users in case of abnormal data readings."
+      }
+    },
+    "portfolio": {
+      "subtitle": "Web Application for showcasing portfolio",
+      "description": "A web application for showcasing work, developed with Next.js to support increased SEO. It allows for language and theme changes as desired."
+    }
+  }
+}
