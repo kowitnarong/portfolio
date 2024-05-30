@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styles from './styles/image-overlay.module.css';
 import Image from 'next/image';
 import { useRouter } from '@/core/navigation/navigation';
