@@ -20,11 +20,11 @@ const nextConfig = {
         has: [
           {
             type: 'host',
-            value: process.env.NEXT_PUBLIC_SITE_URL,
+            value: process.env.NEXT_PUBLIC_WWW_SITE_URL,
           },
         ],
         permanent: true,
-        destination: process.env.NEXT_PUBLIC_SITE_URL + '/:path*',
+        destination: process.env.NEXT_PUBLIC_WWW_SITE_URL + '/:path*',
       },
     ];
   },
