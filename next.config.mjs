@@ -26,11 +26,6 @@ const nextConfig = {
         permanent: true,
         destination: process.env.NEXT_PUBLIC_WWW_SITE_URL + '/:path*',
       },
-      {
-        source: '/',
-        destination: '',
-        permanent: true,
-      },
     ];
   },
   reactStrictMode: process.env.NODE_ENV !== 'development',
