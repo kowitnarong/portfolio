@@ -33,6 +33,7 @@ export const metadata: Metadata = {
   applicationName: 'Portfolio | Kowit Narongtuwapan',
   referrer: 'no-referrer',
   creator: 'Kowit Narongtuwapan',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || ''),
   openGraph: {
     type: 'website',
     siteName: 'Portfolio | Kowit Narongtuwapan',
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
       'Welcome to Kowit Narongtuwapan portfolio! This web application showcases my projects, skills, and achievements as a developer.',
     images: [
       {
-        url: process.env.NEXT_PUBLIC_SITE_URL + '/screenshots/wide-screenshot.png',
+        url: '/screenshots/wide-screenshot.png',
         width: 1280,
         height: 720,
         alt: 'Portfolio | Kowit Narongtuwapan',
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
     title: 'Portfolio | Kowit Narongtuwapan',
     startupImage: [
       {
-        url: process.env.NEXT_PUBLIC_SITE_URL + '/icons/icon-128x128.png',
+        url: '/icons/icon-128x128.png',
         media:
           '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)',
       },
@@ -71,16 +72,12 @@ export const metadata: Metadata = {
   icons: [
     {
       rel: 'apple-touch-icon',
-      url: process.env.NEXT_PUBLIC_SITE_URL + '/icons/icon-128x128.png',
+      url: '/icons/icon-128x128.png',
     },
-    { rel: 'icon', url: process.env.NEXT_PUBLIC_SITE_URL + '/icons/icon-128x128.png' },
+    { rel: 'icon', url: '/icons/icon-128x128.png' },
   ],
   alternates: {
-    canonical: process.env.NEXT_PUBLIC_SITE_URL + './',
-    languages: {
-      en: process.env.NEXT_PUBLIC_SITE_URL + '/en',
-      th: process.env.NEXT_PUBLIC_SITE_URL + '/th',
-    },
+    canonical: './',
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',
