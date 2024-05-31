@@ -15,7 +15,8 @@ export const metadata: Metadata = {
     default: 'Portfolio | Kowit Narongtuwapan | Developer',
     template: '%s | Kowit Narongtuwapan | Developer',
   },
-  description: 'Portfolio of Kowit Narongtuwapan',
+  description:
+    'Welcome to Kowit Narongtuwapan portfolio! This web application showcases my projects, skills, and achievements as a developer.',
   generator: 'Next.js',
   manifest: '/manifest.webmanifest',
   keywords: [
