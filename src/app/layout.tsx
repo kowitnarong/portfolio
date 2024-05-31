@@ -11,8 +11,8 @@ import localFont from 'next/font/local';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Portfolio | Kowit Narongtuwapan',
-    template: '%s | Kowit Narongtuwapan',
+    default: 'Portfolio | Kowit Narongtuwapan | Developer',
+    template: '%s | Kowit Narongtuwapan | Developer',
   },
   description: 'Portfolio of Kowit Narongtuwapan',
   generator: 'Next.js',
@@ -36,8 +36,9 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Portfolio | Kowit Narongtuwapan',
     url: process.env.NEXT_PUBLIC_SITE_URL || '',
-    title: 'Portfolio | Kowit Narongtuwapan',
-    description: 'Portfolio of Kowit Narongtuwapan',
+    title: 'Portfolio | Kowit Narongtuwapan | Developer',
+    description:
+      'Welcome to Kowit Narongtuwapan portfolio! This web application showcases my projects, skills, and achievements as a developer.',
     images: [
       {
         url: process.env.NEXT_PUBLIC_SITE_URL + '/screenshots/wide-screenshot.png',
@@ -74,6 +75,7 @@ export const metadata: Metadata = {
     { rel: 'icon', url: process.env.NEXT_PUBLIC_SITE_URL + '/icons/icon-128x128.png' },
   ],
   alternates: {
+    canonical: './',
     languages: {
       en: process.env.NEXT_PUBLIC_SITE_URL + '/en',
       th: process.env.NEXT_PUBLIC_SITE_URL + '/th',

@@ -77,13 +77,13 @@ export default function NavbarContainer() {
 
       <NavbarContent className="w-full sm:hidden" justify="center">
         <li className="ml-2 font-bold text-black dark:text-white dark:drop-shadow-[0_0_0.3rem_#00000070]">
-          Portfolio
+          <h1>Portfolio</h1>
         </li>
       </NavbarContent>
 
       <NavbarContent className="hidden items-center gap-8 sm:flex" justify="center">
         <li className="flex items-center justify-start border-r-2 border-black pr-8 font-bold dark:border-white">
-          Portfolio
+          <h1>Portfolio</h1>
         </li>
         <NavbarItem>{renderHeader(t('Navbar.header.home'), '/home')}</NavbarItem>
         <NavbarItem>
