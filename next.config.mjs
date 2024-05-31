@@ -10,6 +10,26 @@ const PWA = withPWA({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: process.env.NEXT_PUBLIC_WWW_SITE_URL,
+          },
+        ],
+        permanent: true,
+        destination: process.env.NEXT_PUBLIC_WWW_SITE_URL + '/:path*',
+      },
+      {
+        source: '/',
+        destination: '',
+        permanent: true,
+      },
+    ];
+  },
   reactStrictMode: process.env.NODE_ENV === 'production',
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',

@@ -83,7 +83,7 @@ export default function NavbarContainer() {
 
       <NavbarContent className="hidden items-center gap-8 sm:flex" justify="center">
         <li className="flex items-center justify-start border-r-2 border-black pr-8 font-bold dark:border-white">
-          <h1>Portfolio</h1>
+          Portfolio
         </li>
         <NavbarItem>{renderHeader(t('Navbar.header.home'), '/home')}</NavbarItem>
         <NavbarItem>
