@@ -1,0 +1,32 @@
+{
+  "hosting": {
+    "public": "public",
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/home",
+        "destination": "/home.html"
+      },
+      {
+        "source": "/work/web-development",
+        "destination": "/work/web-development.html"
+      },
+      {
+        "source": "/work/game-development",
+        "destination": "/work/game-development.html"
+      },
+      {
+        "source": "/resume",
+        "destination": "/resume.html"
+      },
+      {
+        "source": "/about",
+        "destination": "/about.html"
+      }
+    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}

@@ -10,14 +10,17 @@ const PWA = withPWA({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: process.env.NODE_ENV !== 'development',
+  reactStrictMode: process.env.NODE_ENV === 'production',
   compiler: {
-    removeConsole: process.env.NODE_ENV !== 'development',
-  },
-  images: {
-    unoptimized: false,
+    removeConsole: process.env.NODE_ENV === 'production',
   },
   swcMinify: true,
+
+  output: 'export',
+  distDir: 'hosting/public',
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default PWA(nextConfig);

@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://kowitnarong.vercel.app/sitemap.xml
+Sitemap: https://kowitnarong.web.app/sitemap.xml

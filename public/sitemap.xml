@@ -6,16 +6,27 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://kowitnarong.vercel.app</loc>
+  <loc>https://kowitnarong.web.app</loc>
 </url>
 
 <url>
-  <loc>https://kowitnarong.vercel.app/th</loc>
+  <loc>https://kowitnarong.web.app/home</loc>
 </url>
 
 <url>
-  <loc>https://kowitnarong.vercel.app/en</loc>
+  <loc>https://kowitnarong.web.app/work/web-development</loc>
 </url>
 
+<url>
+  <loc>https://kowitnarong.web.app/work/game-development</loc>
+</url>
+
+<url>
+  <loc>https://kowitnarong.web.app/resume</loc>
+</url>
+
+<url>
+  <loc>https://kowitnarong.web.app/about</loc>
+</url>
 
 </urlset>
