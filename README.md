@@ -1,8 +1,8 @@
-# Portfolio
+# Portfolio (Static Web App) Firebase Hosting
 
 ![sample website](https://firebasestorage.googleapis.com/v0/b/next-ddd-firebase.appspot.com/o/sample.png?alt=media&token=7bee543d-15ab-4be9-970b-c0e6a958ba52)
 
-**My portfolio website: [kowitnarong.vercel.app](https://kowitnarong.vercel.app/)**
+**My portfolio website: [kowitnarong.web.app](https://kowitnarong.web.app/)**
 
 Welcome to my portfolio! This repository showcases my projects, skills, and achievements as a developer.
 
