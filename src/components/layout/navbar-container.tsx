@@ -179,13 +179,13 @@ export default function NavbarContainer() {
               <ul className="my-1 ml-4 flex w-full flex-col items-start justify-center gap-y-1">
                 <li>
                   {renderMobileHeader(
-                    t('Navbar.header.work.game'),
+                    t('Navbar.header.work.web'),
                     '/work/web-development',
                   )}
                 </li>
                 <li>
                   {renderMobileHeader(
-                    t('Navbar.header.work.web'),
+                    t('Navbar.header.work.game'),
                     '/work/game-development',
                   )}
                 </li>
