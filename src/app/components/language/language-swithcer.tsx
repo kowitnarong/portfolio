@@ -42,7 +42,7 @@ export default function LanguageSwitcher() {
           selectedKeys={selectedKeys}
           onAction={async (key) => {
             setIsLoading(true);
-            router.replace(pathname, { locale: key.toString() });
+            router.replace(pathname, { locale: key as 'en' | 'th' });
             await HelperTime.WaitForMilliSecond(1000);
             setIsLoading(false);
           }}

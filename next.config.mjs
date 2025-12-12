@@ -36,6 +36,13 @@ const nextConfig = {
     unoptimized: false,
   },
   swcMinify: true,
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.node/,
+      use: 'raw-loader',
+    });
+    return config;
+  },
 };
 
 export default nextIntlConfig(PWA(nextConfig));
